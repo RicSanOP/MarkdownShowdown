@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3bddd65af32ffbf1",
+        "id": "2f2f6f6c9f6b38d1",
         "type": "tabs",
         "children": [
           {
-            "id": "833e70f4293993c8",
+            "id": "d54a484531262248",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/xproj/From Chunks to Linked Notes.md",
+                "file": "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
                 "mode": "source",
                 "source": false
               }
@@ -22,16 +22,16 @@
         ]
       },
       {
-        "id": "37a49cf8ab759eca",
+        "id": "5fdd9839fab90430",
         "type": "tabs",
         "children": [
           {
-            "id": "3c10effbfa2cc32f",
+            "id": "d98f52c236d427be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/george/Project Roadmap.md",
+                "file": "pkms/xproj/Demo Flows.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/xproj/From Chunks to Linked Notes.md",
+                "file": "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/xproj/From Chunks to Linked Notes.md",
+                "file": "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pkms/xproj/From Chunks to Linked Notes.md"
+                "file": "pkms/xproj/Chunks to Linked Notes Prompt Chain.md"
               }
             }
           }
@@ -164,31 +164,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "833e70f4293993c8",
+  "active": "d54a484531262248",
   "lastOpenFiles": [
-    "pkms/suhas/DETR Model.md",
+    "pkms/xproj/CV Project Determination.md",
+    "pkms/xmedia/Pasted image 20241005152731.png",
+    "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
     "pkms/xproj/From Chunks to Linked Notes.md",
-    "pkms/suhas/Model Implementation.md",
-    "pkms/suhas/PyTorch Reference.md",
-    "pkms/rifaat/Convolutional Neural Network.md",
-    "pkms/suhas/Dependency Management.md",
-    "pkms/rifaat/First Training Experiment.md",
-    "pkms/suhas/CNN Backbone.md",
-    "pkms/george/Project Roadmap.md",
-    "pkms/rifaat/Transformer Encoder-Decoder.md",
-    "pkms/rifaat/Todos.md",
-    "pkms/rifaat/Detection Transformer Model Architecture.md",
-    "pkms/rifaat/DETR Workflow Summary.md",
-    "pkms/rifaat/COCO Dataset.md",
-    "pkms/george/Presentation Plan.md",
     "pkms/george/Computer Vision History.md",
-    "pkms/george/DETR.md",
+    "pkms/rifaat/DETR Workflow Summary.md",
     "pkms/george/Transformers.md",
+    "pkms/george/DETR.md",
+    "pkms/george/CNN.md",
+    "pkms/suhas/Dependency Management.md",
+    "pkms/suhas/Model Implementation.md",
+    "pkms/rifaat/Third Training Experiment.md",
+    "pkms/rifaat/Second Training Experiment.md",
+    "pkms/rifaat/Transformer Encoder-Decoder.md",
+    "pkms/rifaat/First Training Experiment.md",
+    "pkms/rifaat/Detection Transformer Model Architecture.md",
+    "pkms/rifaat/Convolutional Neural Network.md",
     "pkms/george/What is Computer Vision?.md",
     "pkms/george/Team Directory.md",
-    "pkms/george/CNN.md",
-    "pkms/george/Object Detection Project.md",
+    "pkms/george/Project Roadmap.md",
+    "pkms/xproj/Demo Flows.md",
+    "pkms/suhas/PyTorch Reference.md",
     "pkms/suhas/DETR Model Training.md",
+    "pkms/suhas/DETR Model.md",
     "pkms/suhas/Debugging X.md",
     "pkms/rifaat/Useful Commands.md",
     "pkms/rifaat/Transformer Details.md",
@@ -201,7 +202,6 @@
     "pkms/george/attachments",
     "pkms/george/information",
     "pkms/george/projects",
-    "pkms/xmedia/Pasted image 20241005152731.png",
     "pkms/xmedia"
   ]
 }

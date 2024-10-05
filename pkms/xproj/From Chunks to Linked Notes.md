@@ -1,2 +1,0 @@
-- Context Prompt
-	- We are a team working on an AI project together. Each member 
