@@ -23,3 +23,12 @@ Therefore we need your help! You will help us merge our individual notebases int
 - suggest wikilink style links to connect the note files semantically
 - draft the new notes taking into consideration the relevant markdown file contents
 
+### Centralized Notebase Structure
+
+##### General Description
+
+The centralized notebase which you will be generating by merging our individual notebases together will follow a mutally agreed upon structure. Each note in this new notebase will fall into one of 3 note types:
+- task management: contains information on what the author has done or ought to do next
+- project documentation: contains information on how the project will be desgined, implemented or operated
+- knowledge database: contains information that is helpful for understanding the problem space and solving challenges in the project
+
