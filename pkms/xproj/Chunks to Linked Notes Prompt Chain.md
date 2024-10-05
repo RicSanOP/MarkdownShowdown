@@ -40,23 +40,31 @@ Task Management Notes are markdown files containing information on actions that 
 - a table containing tasks on each row along with metadata on the team member responsible, the task priority, expected deadline and/or task priority
 ##### Project Documentation Notes
 
-Project Documentation Notes are markdown files containing information on the project deliverable itself. These notes usually focus on a specific part of the project, describing one 
+Project Documentation Notes are markdown files containing information on the project deliverable itself. These notes usually focus on a specific part of the project. They could focus on software aspect by describing the architecture of a software module, outlining the code structure of a class or function or listing  the dependencies of a codebase. Project documentation could also discuss machine learning processes such as results of model training, provide reasons for how learning models are architected or comment on the performance of a model during evaluation.
 ##### Knowledge Database Notes
+
+Knowledge Database Notes are markdown files containing information that is meant to educate on the problem space. These are more independent from the project's development and are meant to assist the author in better understanding the problem they are trying to solve. The hope is that some of this knowledge can come in handy when justifying current approaches in the project and/or offer solutions to future potential problems.
 
 ### Markdown Candidate Proposals
 
-##### Task Management Notes
-
-[[Chunks to Linked Notes Prompt Chain#Task Management Notes]]
 
 ### Markdown Title Suggestion
 
-##### Task Management Notes
+##### Task Management Notes Preamble
 
 [[Chunks to Linked Notes Prompt Chain#Context Prompt]]
 [[Chunks to Linked Notes Prompt Chain#Task Management Notes]]
 
-You are going to help us come up with a title for a new markdown note. We are going to provide you with a collection of markdown files and chunks that have tagged with the Task Management note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please suggest a title for this new markdown note and explain why you have decided to go with this title. Feel free to provide references to the provided markdown files and chunks. Please provide your answer in the following JSON format:
+##### Project Documentation Notes Preamble
+
+[[Chunks to Linked Notes Prompt Chain#Context Prompt]]
+[[Chunks to Linked Notes Prompt Chain#Project Documentation Notes]]
+##### Knowledge Database Notes Preamble
+
+[[Chunks to Linked Notes Prompt Chain#Context Prompt]]
+[[Chunks to Linked Notes Prompt Chain#Knowledge Database Notes]]
+
+You are going to help us come up with a title for a new markdown note. We are going to provide you with a collection of markdown files and chunks that have tagged with the {INSERT NOTE TYPE HERE} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please suggest a title for this new markdown note and explain why you have decided to go with this title. Feel free to provide references to the provided markdown files and chunks. Please provide your answer in the following JSON format:
 
 {
 	title: "",
