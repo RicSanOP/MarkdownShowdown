@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "bf5a5d60371c0357",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f2f6f6c9f6b38d1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d98f52c236d427be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pkms/xproj/LMMS Dataset.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "4501813cd9c89857",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a44e163e34b36702",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pkms/team/placeholder 1 1 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b81258b558e70715",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd619a022dd7ad12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "511942abfaaffb6f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3f8a29808b2d46eb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "03694772f01fd5d5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "520617429665cce3",
+    "type": "split",
+    "children": [
+      {
+        "id": "57f01a9375e4eef7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50b44ae77480c8ac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "pkms/team/placeholder 1 1 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "960ea0cd30648ded",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "pkms/team/placeholder 1 1 1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5fc2118a71161196",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ba228b78bef50b8c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "pkms/team/placeholder 1 1 1.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "511942abfaaffb6f",
+  "lastOpenFiles": [
+    "pkms/suhas/placeholder 1 1.md",
+    "pkms/team/placeholder 1 1 1.md",
+    "pkms/rifaat/placeholder 1.md",
+    "pkms/george/placeholder.md",
+    "pkms/xproj/CV Project Determination.md",
+    "pkms/xmedia/Pasted image 20241005152731.png",
+    "pkms/xmedia",
+    "pkms/Untitled.md",
+    "pkms/xproj/LMMS Dataset.md",
+    "pkms/xproj"
+  ]
+}
