@@ -62,23 +62,6 @@ class Note:
                 chunk.insert(0, info_chunk)
             if not info_chunk.string:
                 info_chunk.string = ""
-
-            nl = "\n"
-            links_text = ""
-            if self.forward_links or self.backward_links:
-                link_prompt = f"""We are dealing with the following chunk: {chunk}
-                Please output a maximum of 3 forward links and 3 back links that are relevant to this chunk in the following format:
-                <forward_links> </forward_links>
-                <backlinks> </backlinks>
-                Do not output anything else and if there are no relevant links, output an empty string in the tags.
-
-                Forward Links to consider: {nl.join(self.forward_links)}
-                Backward Links to consider: {nl.join(self.backward_links)}"""
-                links_text = query(link_prompt, "mistral-large-latest", 150)
-                print("LINKS: ", links_text)
-            if links_text:
-                print("LINKS: ", links_text)
-                info_chunk.string += links_text 
             info_chunk.string += "\nAuthor: " + self.user
             info_chunk.string += "\nRelative Path: " + str(self.rel_path)
 
@@ -88,7 +71,7 @@ class Note:
                 prompt = f"""The following chunk is too long: {chunk}
                 Please shorten it to less characters and output the shortened version.
                 """
-                shortened_chunk = query(prompt, "mistral-large-latest", max_tokens=300)
+                shortened_chunk = query(prompt, "mistral-small-latest", max_tokens=300)
                 chunk.string = shortened_chunk.find("chunk").string[0:1000]
         
         output_tuples = []
