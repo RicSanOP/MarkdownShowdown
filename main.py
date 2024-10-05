@@ -1,5 +1,9 @@
 from md_parse import get_list_of_users
 from vector.chroma_handler import ChromaHandler
+import faiss
+from bertopic import BERTopic
+from umap import UMAP
+
 
 db_handler = ChromaHandler(f"../vector_tings5", "test-strings-1")
 # db_handler.add_docs_with_embeddings(["ligma1", "more ligma"], ["id1", "id2"])

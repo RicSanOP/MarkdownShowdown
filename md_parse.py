@@ -11,45 +11,64 @@ mistral = Mistral(
 )
 
 
-def encode_image(image_path):
-    """Encode the image to base64."""
-    try:
-        with open(image_path, "rb") as image_file:
-            return base64.b64encode(image_file.read()).decode("utf-8")
-    except FileNotFoundError:
-        print(f"Error: The file {image_path} was not found.")
-        return None
-    except Exception as e:
-        print(f"Error: {e}")
-        return None
+class ImageProcessor:
 
+    @staticmethod
+    def encode_image(image_path):
+        """Encode the image to base64."""
+        try:
+            with open(image_path, "rb") as image_file:
+                return base64.b64encode(image_file.read()).decode("utf-8")
+        except FileNotFoundError:
+            print(f"Error: The file {image_path} was not found.")
+            return None
+        except Exception as e:
+            print(f"Error: {e}")
+            return None
 
-def get_image_description(image_path):
+    @staticmethod
+    def get_image_description(image_path):
 
-    base64_image = encode_image(image_path)
-    # model = "pixtral-12b-2409"
+        base64_image = ImageProcessor.encode_image(image_path)
+        # model = "pixtral-12b-2409"
 
-    messages = [
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Describe this image",  # TODO: prompt engineer this
-                },
-                {
-                    "type": "image_url",
-                    "image_url": f"data:image/jpeg;base64,{base64_image}",
-                },
-            ],
-        }
-    ]
+        messages = [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "Describe this image",  # TODO: prompt engineer this
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": f"data:image/jpeg;base64,{base64_image}",
+                    },
+                ],
+            }
+        ]
 
-    chat_response = mistral.chat.complete(
-        model="pixtral-12b-2409", messages=messages, max_tokens=200
-    )
+        chat_response = mistral.chat.complete(
+            model="pixtral-12b-2409", messages=messages, max_tokens=200
+        )
 
-    return chat_response.choices[0].message.content
+        return chat_response.choices[0].message.content
+
+    @staticmethod
+    def replace_images_with_desc(markdown_string):
+        # regex pattern to match ![[name]] where "name" is the image name
+        pattern = r"!\[\[([^\]]+)\]\]"
+
+        image_names = re.findall(pattern, markdown_string)
+
+        # Replace each instance of ![[name]] with its description
+        for image_name in image_names:
+            image_path = f"../attachments/{image_name}"
+            encoded = ImageProcessor.encode_image(image_path)
+            description = ImageProcessor.get_image_description(encoded)
+            markdown_string = markdown_string.replace(f"![[{image_name}]]", description)
+
+        return markdown_string
 
 
 def query(text, model, max_tokens=10000):
@@ -166,6 +185,7 @@ class Vault:
 
     def __init__(self, user, vault_path):
         self.vault_path = vault_path
+        self.all_chunks = []
         self.user = user
         self.notes = []
         self.all_chunks = []

@@ -36,11 +36,32 @@ class ChromaHandler:
         except Exception as e:
             print("exception bruh", e)
 
-    def add_docs_with_embeddings(self, docs, ids):
+    def add_docs_with_embeddings(self, docs, ids, metadata=None):
         embeddings = self.get_text_embeddings(docs)
         self.collection.add(
-            documents=docs, embeddings=embeddings, ids=ids
+            documents=docs, embeddings=embeddings, ids=ids, metadatas=metadata
         )  # chroma will not embed this
+
+    def query_collection_with_min_score(self, query_texts, n, min_score):
+        # iterate through all and return where score is greater than min_score
+        embeddings = self.get_text_embeddings(query_texts)
+        query_response = self.collection.query(
+            query_embeddings=embeddings,  # chroma will embed this
+            n_results=n,
+        )
+        output_texts = []
+        output_ids = []
+
+        for i in range(len(query_response["distances"])):
+            if query_response["distances"][i] > min_score:
+                output_texts.append(query_response["documents"][i])
+                output_ids.append(query_response["ids"][i])
+
+        responses = {
+            "docs": output_texts,
+            "ids": output_ids,
+        }
+        return responses
 
     def query_collection(self, query_texts, n, use_mistral=True):
         if use_mistral:
