@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/suhas/CNN Backbone.md",
+                "file": "pkms/suhas/PyTorch Reference.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/suhas/CNN Backbone.md",
+                "file": "pkms/suhas/PyTorch Reference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/suhas/CNN Backbone.md",
+                "file": "pkms/suhas/PyTorch Reference.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pkms/suhas/CNN Backbone.md"
+                "file": "pkms/suhas/PyTorch Reference.md"
               }
             }
           }
@@ -166,10 +166,20 @@
   },
   "active": "d98f52c236d427be",
   "lastOpenFiles": [
-    "pkms/george/Project Roadmap.md",
-    "pkms/suhas/CNN Backbone.md",
-    "pkms/rifaat/COCO Dataset.md",
     "pkms/suhas/DETR Model Training.md",
+    "pkms/suhas/DETR Model.md",
+    "pkms/suhas/Debugging X.md",
+    "pkms/george/Project Roadmap.md",
+    "pkms/rifaat/Transformer Encoder-Decoder.md",
+    "pkms/rifaat/Useful Commands.md",
+    "pkms/rifaat/Transformer Details.md",
+    "pkms/rifaat/Detection Transformer Model Architecture.md",
+    "pkms/rifaat/Convolutional Neural Network.md",
+    "pkms/suhas/Model Implementation.md",
+    "pkms/suhas/CNN Backbone.md",
+    "md_parse.py",
+    "main.py",
+    "pkms/rifaat/COCO Dataset.md",
     "pkms/suhas/Dependency Management.md",
     "pkms/george/Object Detection Project.md",
     "pkms/george/Team Directory.md",
@@ -182,7 +192,6 @@
     "pkms/xproj/Demo Flows.md",
     "vector/chroma_handler.py",
     "vector",
-    "pkms/suhas/DETR Model.md",
     "pkms/suhas/attachments",
     "pkms/rifaat/attachments",
     "pkms/george/attachments",
@@ -190,17 +199,9 @@
     "pkms/george/Installation Steps.md",
     "pkms/rifaat/Todos.md",
     "pkms/suhas/2025-01-01.md",
-    "pkms/suhas/PyTorch Reference.md",
-    "pkms/suhas/Debugging X.md",
-    "pkms/rifaat/Third Training Experiment.md",
-    "pkms/rifaat/Second Training Experiment.md",
-    "pkms/rifaat/First Training Experiment.md",
-    "pkms/george/2025-01-01.md",
-    "pkms/suhas/2025-01-02.md",
     "pkms/george/information",
     "pkms/george/projects",
     "pkms/xmedia/Pasted image 20241005152731.png",
-    "pkms/xmedia",
-    "pkms/xproj"
+    "pkms/xmedia"
   ]
 }

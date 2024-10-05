@@ -11,8 +11,12 @@
             "id": "27500c3937bacc96",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Todos.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Todos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Todos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Todos.md"
+              }
             }
           }
         ]
@@ -139,5 +147,11 @@
     }
   },
   "active": "27500c3937bacc96",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Useful Commands.md",
+    "Transformer Encoder-Decoder.md",
+    "Todos.md",
+    "Transformer Details.md",
+    "Untitled.md"
+  ]
 }

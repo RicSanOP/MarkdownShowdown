@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "What is Computer Vision?.md",
+                "file": "Team Directory.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "What is Computer Vision?.md",
+                "file": "Team Directory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "What is Computer Vision?.md",
+                "file": "Team Directory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "What is Computer Vision?.md"
+                "file": "Team Directory.md"
               }
             }
           }
@@ -148,14 +148,14 @@
   },
   "active": "b85724ed619ccd59",
   "lastOpenFiles": [
+    "What is Computer Vision?.md",
+    "Team Directory.md",
+    "Project Roadmap.md",
+    "Presentation Plan.md",
     "Tasks.md",
     "Untitled.md",
-    "Project Roadmap.md",
     "Object Detection Project.md",
-    "Presentation Plan.md",
-    "What is Computer Vision?.md",
     "Task Table.md",
-    "Team Directory.md",
     "Evaluation Steps.md"
   ]
 }
