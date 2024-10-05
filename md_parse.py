@@ -114,6 +114,7 @@ class Vault:
     vault_path: str
     notes: list
     user: str
+    all_chunks: list
 
     def load_notes(self):
         path = pathlib.Path(self.vault_path)
@@ -126,7 +127,10 @@ class Vault:
             forward_links = vault.get_wikilinks(note_title)
             markdown = vault.get_source_text(note_title)
             print("Procesing note: ", note_title)
-            self.notes.append(Note(note_title, rel_path, markdown, self.vault_path, forward_links, back_links, self.user))
+            created_note = Note(note_title, rel_path, markdown, self.vault_path, forward_links, back_links, self.user)
+            self.notes.append(created_note)
+            self.all_chunks.extend(created_note.vector_db_inputs)
+            
 
     def __init__(self, user, vault_path):
         self.vault_path = vault_path
