@@ -38,7 +38,7 @@ def get_text_embeddings(sentences):
     ]
     return embeddings
 
-db_handler = ChromaHandler(f"../vector_tings4", "test-strings-1")
+db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
 
 for user in all_users:
     chunks = user.all_chunks
@@ -77,14 +77,14 @@ for user in all_users:
 
         Input Content for Classification: {text}
         """
-        tags = query(classification_prompt, "mistral-large-latest", 100)
+        tags_txt = query(classification_prompt, "mistral-large-latest", 100)
         tags = {"task": False, "project": False, "knowledge": False}
 
-        if "task" in tags:
+        if "task" in tags_txt:
             tags["task"] = True
-        if "project" in tags:
+        if "project" in tags_txt:
             tags["project"] = True
-        if "knowledge" in tags:
+        if "knowledge" in tags_txt:
             tags["knowledge"] = True
 
         all_tags.append(tags)

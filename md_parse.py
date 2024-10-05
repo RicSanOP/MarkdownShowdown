@@ -130,6 +130,8 @@ class Note:
                 chunk.insert(0, info_chunk)
             if not info_chunk.string:
                 info_chunk.string = ""
+                
+            info_chunk.string += "\nNote Path: " + str(self.rel_path) + "\nAuthor: " + str(self.user)
 
             # iterate through chunks and prompt for a succinct context if it is greater than 1000 characters
             # for chunk in chunks:
