@@ -39,7 +39,7 @@ class ChromaHandler:
     def add_docs_with_embeddings(self, docs, ids, metadata=None):
         embeddings = self.get_text_embeddings(docs)
         self.collection.add(
-            documents=docs, embeddings=embeddings, ids=ids, metadata=metadata
+            documents=docs, embeddings=embeddings, ids=ids, metadatas=metadata
         )  # chroma will not embed this
 
     def query_collection_with_min_score(self, query_texts, n, min_score):
