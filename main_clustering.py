@@ -105,8 +105,6 @@ hdbscan_model = HDBSCAN(min_samples=3, gen_min_span_tree=True, prediction_data=T
 topic_model = BERTopic(umap_model=umap_model, hdbscan_model=hdbscan_model)
 matrix, _ = topic_model.fit_transform(all_texts)
 
-representative_docs = topic_model.get_representative_docs()
-
 for topic in topic_model.get_topics():
     print("Topic: ", topic)
     for i in range(len(matrix)):
