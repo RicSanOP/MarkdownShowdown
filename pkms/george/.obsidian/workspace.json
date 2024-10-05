@@ -1,40 +1,18 @@
 {
   "main": {
-    "id": "bf5a5d60371c0357",
+    "id": "6167823454d7d2e2",
     "type": "split",
     "children": [
       {
-        "id": "2f2f6f6c9f6b38d1",
+        "id": "b5c107453b88ba76",
         "type": "tabs",
         "children": [
           {
-            "id": "d98f52c236d427be",
+            "id": "b85724ed619ccd59",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pkms/george/Team Directory.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "3bddd65af32ffbf1",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "833e70f4293993c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pkms/xproj/Demo Flows.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -43,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b81258b558e70715",
+    "id": "f272f7c16045df9a",
     "type": "split",
     "children": [
       {
-        "id": "fd619a022dd7ad12",
+        "id": "39138105aea8f00d",
         "type": "tabs",
         "children": [
           {
-            "id": "511942abfaaffb6f",
+            "id": "3535c8e000adf057",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -61,7 +39,7 @@
             }
           },
           {
-            "id": "3f8a29808b2d46eb",
+            "id": "6657f4eecd6aaaaa",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -76,7 +54,7 @@
             }
           },
           {
-            "id": "03694772f01fd5d5",
+            "id": "5e29e39fafc09f28",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -90,20 +68,19 @@
     "width": 300
   },
   "right": {
-    "id": "520617429665cce3",
+    "id": "dbdb0088fb6d8b06",
     "type": "split",
     "children": [
       {
-        "id": "57f01a9375e4eef7",
+        "id": "f2bff6233576845e",
         "type": "tabs",
         "children": [
           {
-            "id": "50b44ae77480c8ac",
+            "id": "feafbb1fecba1e47",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/george/Team Directory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,19 +92,18 @@
             }
           },
           {
-            "id": "960ea0cd30648ded",
+            "id": "c1f3263b6e80f518",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/george/Team Directory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "5fc2118a71161196",
+            "id": "2fd87dca284e88c6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -138,13 +114,11 @@
             }
           },
           {
-            "id": "ba228b78bef50b8c",
+            "id": "ceb5516baeee6431",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "pkms/george/Team Directory.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -164,40 +138,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d98f52c236d427be",
-  "lastOpenFiles": [
-    "pkms/george/Task Table.md",
-    "pkms/george/Team Directory.md",
-    "pkms/george/Presentation Plan.md",
-    "pkms/xproj/Demo Flows.md",
-    "pkms/suhas/DETR Model.md",
-    "pkms/suhas/attachments",
-    "pkms/rifaat/attachments",
-    "pkms/george/attachments",
-    "pkms/xproj/LMMS Dataset.md",
-    "pkms/george/Installation Steps.md",
-    "pkms/rifaat/Todos.md",
-    "pkms/suhas/2025-01-01.md",
-    "pkms/george/What is Computer Vision?.md",
-    "pkms/george/Object Detection Project.md",
-    "pkms/suhas/DETR Model Training.md",
-    "pkms/suhas/PyTorch Reference.md",
-    "pkms/suhas/CNN Implementation.md",
-    "pkms/suhas/Debugging X.md",
-    "pkms/rifaat/Third Training Experiment.md",
-    "pkms/rifaat/Second Training Experiment.md",
-    "pkms/rifaat/First Training Experiment.md",
-    "pkms/george/2025-01-01.md",
-    "pkms/suhas/2025-01-02.md",
-    "pkms/rifaat/2025-01-02.md",
-    "pkms/rifaat/2025-01-01.md",
-    "pkms/george/2025-01-02.md",
-    "pkms/rifaat/Detection Transformer Model Architecture.md",
-    "pkms/rifaat/Useful Commands.md",
-    "pkms/george/information",
-    "pkms/george/projects",
-    "pkms/xmedia/Pasted image 20241005152731.png",
-    "pkms/xmedia",
-    "pkms/xproj"
-  ]
+  "active": "b85724ed619ccd59",
+  "lastOpenFiles": []
 }
