@@ -1,4 +1,3 @@
-
 import os
 import obsidiantools.api as otools
 import pathlib
@@ -12,14 +11,21 @@ mistral = Mistral(
 
 
 def query(text, model, max_tokens=10000):
-    return mistral.chat.complete(model=model, 
-        max_tokens=max_tokens,
-        messages=[
-        {
-            "content": text,
-            "role": "system",
-        },
-    ]).choices[0].message.content
+    return (
+        mistral.chat.complete(
+            model=model,
+            max_tokens=max_tokens,
+            messages=[
+                {
+                    "content": text,
+                    "role": "system",
+                },
+            ],
+        )
+        .choices[0]
+        .message.content
+    )
+
 
 class Note:
     markdown: str
@@ -31,7 +37,7 @@ class Note:
     user: str
 
     NUM_CHARS_PER_CHUNK = 800
-    
+
     def generate_vector_db_inputs(self):
         # generate a list of inputs for the vector db by prompting an LLM and then splitting greedily where needed
         prompt = f"""
@@ -78,7 +84,7 @@ class Note:
                 print("LINKS: ", links_text)
             if links_text:
                 print("LINKS: ", links_text)
-                info_chunk.string += links_text 
+                info_chunk.string += links_text
             info_chunk.string += "\nAuthor: " + self.user
             info_chunk.string += "\nRelative Path: " + str(self.rel_path)
 
@@ -88,19 +94,21 @@ class Note:
                 prompt = f"""The following chunk is too long: {chunk}
                 Please shorten it to less characters and output the shortened version.
                 """
-                shortened_chunk = query(prompt, "mistral-large-latest", max_tokens=300)
+                shortened_chunk = query(prompt, "mistral-small-latest", max_tokens=300)
                 chunk.string = shortened_chunk.find("chunk").string[0:1000]
-        
+
         output_tuples = []
 
         for chunk_id, chunk in enumerate(chunks):
-            chunk_text = chunk  
+            chunk_text = chunk
             uid = f"{str(self.rel_path)}_{str(chunk_id)}"
             output_tuples.append((uid, chunk_text))
 
         return output_tuples
 
-    def __init__(self, title, rel_path, markdown, vault_path, forward_links, back_links, user):
+    def __init__(
+        self, title, rel_path, markdown, vault_path, forward_links, back_links, user
+    ):
         self.title = title
         self.vault_path = vault_path
         self.user = user
@@ -109,6 +117,7 @@ class Note:
         self.forward_links = forward_links
         self.backward_links = back_links
         self.vector_db_inputs = self.generate_vector_db_inputs()
+
 
 class Vault:
     vault_path: str
@@ -127,15 +136,23 @@ class Vault:
             forward_links = vault.get_wikilinks(note_title)
             markdown = vault.get_source_text(note_title)
             print("Procesing note: ", note_title)
-            created_note = Note(note_title, rel_path, markdown, self.vault_path, forward_links, back_links, self.user)
+            created_note = Note(
+                note_title,
+                rel_path,
+                markdown,
+                self.vault_path,
+                forward_links,
+                back_links,
+                self.user,
+            )
             self.notes.append(created_note)
             self.all_chunks.extend(created_note.vector_db_inputs)
-            
 
     def __init__(self, user, vault_path):
         self.vault_path = vault_path
         self.user = user
         self.notes = []
+        self.all_chunks = []
         self.load_notes()
 
 
@@ -145,6 +162,3 @@ def get_list_of_users(team_path):
         user_vault = Vault(user_path, os.path.join(team_path, user_path))
         users.append(user_vault)
     return users
-
-
-
