@@ -5,7 +5,7 @@ The COCO (Common Objects in Context) dataset is a large-scale image dataset desi
 ## Data Preparation
 
 1. **Dataset: COCO (Common Objects in Context)**
-   - DETR is primarily trained on the COCO dataset, which contains images with labeled objects for object detection tasks.
+   - [[Detection Transformer Model Architecture]] (DETR) is primarily trained on the COCO dataset, which contains images with labeled objects for object detection tasks.
    - **COCO 2017 Dataset**: Download and unzip the train and validation splits. The dataset can be found [here](https://cocodataset.org/#download).
 2. **Dataset Structure**:
    - Images and annotations are separated into the following folders:

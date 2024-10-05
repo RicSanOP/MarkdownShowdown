@@ -23,13 +23,18 @@ class ChromaHandler:
         )
 
     def get_text_embeddings(self, sentences):
-        embeddings_resp = self.mistral_client.embeddings.create(
-            model="mistral-embed", inputs=sentences
-        )
-        embeddings = [
-            string_embedding.embedding for string_embedding in embeddings_resp.data
-        ]
-        return embeddings
+        if not sentences:
+            return
+        try:
+            embeddings_resp = self.mistral_client.embeddings.create(
+                model="mistral-embed", inputs=sentences
+            )
+            embeddings = [
+                string_embedding.embedding for string_embedding in embeddings_resp.data
+            ]
+            return embeddings
+        except Exception as e:
+            print("exception bruh", e)
 
     def add_docs_with_embeddings(self, docs, ids, metadata=None):
         embeddings = self.get_text_embeddings(docs)
