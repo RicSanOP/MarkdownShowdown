@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/george/Team Directory.md",
+                "file": "pkms/george/2025-01-02 Meeting.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/xproj/Demo Flows.md",
+                "file": "pkms/george/What is Computer Vision?.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/george/Team Directory.md",
+                "file": "pkms/george/2025-01-02 Meeting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/george/Team Directory.md",
+                "file": "pkms/george/2025-01-02 Meeting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pkms/george/Team Directory.md"
+                "file": "pkms/george/2025-01-02 Meeting.md"
               }
             }
           }
@@ -166,10 +166,18 @@
   },
   "active": "d98f52c236d427be",
   "lastOpenFiles": [
-    "pkms/george/Task Table.md",
+    "pkms/george/What is Computer Vision?.md",
     "pkms/george/Team Directory.md",
+    "pkms/george/Object Detection Project.md",
+    "pkms/george/Tasks.md",
     "pkms/george/Presentation Plan.md",
+    "pkms/george/Project Roadmap.md",
+    "pkms/george/Evaluation Steps.md",
+    "pkms/george/2025-01-02 Meeting.md",
+    "pkms/george/2025-01-01 Meeting.md",
     "pkms/xproj/Demo Flows.md",
+    "vector/chroma_handler.py",
+    "vector",
     "pkms/suhas/DETR Model.md",
     "pkms/suhas/attachments",
     "pkms/rifaat/attachments",
@@ -178,8 +186,6 @@
     "pkms/george/Installation Steps.md",
     "pkms/rifaat/Todos.md",
     "pkms/suhas/2025-01-01.md",
-    "pkms/george/What is Computer Vision?.md",
-    "pkms/george/Object Detection Project.md",
     "pkms/suhas/DETR Model Training.md",
     "pkms/suhas/PyTorch Reference.md",
     "pkms/suhas/CNN Implementation.md",
@@ -191,9 +197,6 @@
     "pkms/suhas/2025-01-02.md",
     "pkms/rifaat/2025-01-02.md",
     "pkms/rifaat/2025-01-01.md",
-    "pkms/george/2025-01-02.md",
-    "pkms/rifaat/Detection Transformer Model Architecture.md",
-    "pkms/rifaat/Useful Commands.md",
     "pkms/george/information",
     "pkms/george/projects",
     "pkms/xmedia/Pasted image 20241005152731.png",
