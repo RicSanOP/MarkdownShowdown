@@ -13,6 +13,7 @@ path = "pkms"
 all_users = get_list_of_users(path)
 all_vectors = []
 all_texts = []
+all_tags = []
 
 mistral = Mistral(
     api_key=os.getenv("MISTRAL_API_KEY", ""),
@@ -51,7 +52,7 @@ for user in all_users:
 
     if not texts or not ids:
         continue
-    all_tags = []
+    tags_list = []
 
     for text in texts:
         classification_prompt = f"""
@@ -87,28 +88,33 @@ for user in all_users:
         if "knowledge" in tags_txt:
             tags["knowledge"] = True
 
-        all_tags.append(tags)
+        tags_list.append(tags)
     
     db_handler.add_docs_with_embeddings(
         texts,
         ids, 
-        all_tags
+        tags_list
     )
     all_vectors.extend(db_handler.get_text_embeddings(texts))
     all_texts.extend(texts)
+    all_tags.extend(tags_list)
 
 import IPython
 IPython.embed()
 
-umap_model = UMAP(n_neighbors=3, n_components=5, min_dist=0.0, metric='cosine')
-hdbscan_model = HDBSCAN(min_samples=3, gen_min_span_tree=True, prediction_data=True, min_cluster_size=3)
-topic_model = BERTopic(umap_model=umap_model, hdbscan_model=hdbscan_model)
-matrix, _ = topic_model.fit_transform(all_texts)
+for tag_name in next(iter(all_tags)).keys():
+    print("Clustering for tag: " + tag_name)
+    tagged_texts = []
+    for i in range(len(all_tags)):
+        if all_tags[i][tag_name]:
+            tagged_texts.append(all_texts[i])
+    umap_model = UMAP(n_neighbors=5, n_components=10, min_dist=0.0, metric='cosine')
+    hdbscan_model = HDBSCAN(min_samples=3, gen_min_span_tree=True, prediction_data=True, min_cluster_size=3)
+    topic_model = BERTopic(umap_model=umap_model, hdbscan_model=hdbscan_model)
+    matrix, _ = topic_model.fit_transform(all_texts)
 
-representative_docs = topic_model.get_representative_docs()
-
-for topic in topic_model.get_topics():
-    print("Topic: ", topic)
-    for i in range(len(matrix)):
-        if matrix[i] == topic:
-            print(all_texts[i])
+    for topic in topic_model.get_topics():
+        print("Topic: ", topic)
+        for i in range(len(matrix)):
+            if matrix[i] == topic:
+                print(all_texts[i])
