@@ -32,3 +32,13 @@ The centralized notebase which you will be generating by merging our individual 
 - project documentation: contains information on how the project will be desgined, implemented or operated
 - knowledge database: contains information that is helpful for understanding the problem space and solving challenges in the project
 
+##### Task Management Notes
+
+Task Management Notes are markdown files containing information on actions that the author has taken in the past, is currently undertaking and/or will take in the future. Task Management Notes can take on many different styles such as:
+- a devlog where the author describes what they have done in a journaling writing style which includes self reflections on their work
+- a checklist where the author determines what they have to do and check off items when completed
+- a table containing tasks on each row along with metadata on the team member responsible, the task priority, expected deadline and/or task priority
+##### Project Documentation Notes
+
+Project Documentation Notes are markdown files containing information on the project deliverable itself. These notes usually focus on a specific part of the project, describing one 
+##### Knowledge Database Notes
