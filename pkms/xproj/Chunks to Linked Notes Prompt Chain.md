@@ -42,3 +42,23 @@ Task Management Notes are markdown files containing information on actions that 
 
 Project Documentation Notes are markdown files containing information on the project deliverable itself. These notes usually focus on a specific part of the project, describing one 
 ##### Knowledge Database Notes
+
+### Markdown Candidate Proposals
+
+##### Task Management Notes
+
+[[Chunks to Linked Notes Prompt Chain#Task Management Notes]]
+
+### Markdown Title Suggestion
+
+##### Task Management Notes
+
+[[Chunks to Linked Notes Prompt Chain#Context Prompt]]
+[[Chunks to Linked Notes Prompt Chain#Task Management Notes]]
+
+You are going to help us come up with a title for a new markdown note. We are going to provide you with a collection of markdown files and chunks that have tagged with the Task Management note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please suggest a title for this new markdown note and explain why you have decided to go with this title. Feel free to provide references to the provided markdown files and chunks. Please provide your answer in the following JSON format:
+
+{
+	title: "",
+	justification: ""
+}
