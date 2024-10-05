@@ -88,7 +88,7 @@ class Note:
                 prompt = f"""The following chunk is too long: {chunk}
                 Please shorten it to less characters and output the shortened version.
                 """
-                shortened_chunk = query(prompt, "mistral-large-latest", max_tokens=300)
+                shortened_chunk = query(prompt, "mistral-small-latest", max_tokens=300)
                 chunk.string = shortened_chunk.find("chunk").string[0:1000]
         
         output_tuples = []
