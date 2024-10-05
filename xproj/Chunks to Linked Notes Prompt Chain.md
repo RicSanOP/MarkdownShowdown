@@ -87,6 +87,7 @@ You are going to help us find links between suggested markdown file candidates. 
 - A parent-child relation where one note contains another
 - A similarity relation between 2 notes
 - An sibling relation where both notes link to each other
+
 We are going to provide you with a collection of candidates in the form of a JSON list. An example of the input JSON list can be found below (imagine that the empty strings below have been filled):
 
 [
@@ -127,4 +128,15 @@ Please suggest semantic links between these notes in the form of a JSON list whi
 	},
 ]
 
-### 
+### Linked Markdown Drafting
+
+[[Chunks to Linked Notes Prompt Chain#Context Prompt]]
+
+[[Chunks to Linked Notes Prompt Chain#Task Management Notes]]
+OR
+[[Chunks to Linked Notes Prompt Chain#Project Documentation Notes]]
+OR
+[[Chunks to Linked Notes Prompt Chain#Knowledge Database Notes]]
+
+
+You are going to draft a new markdown note within the parameters we provide. This new markdown note will include wikilink style links and may also include codeblocks and/or images. We 

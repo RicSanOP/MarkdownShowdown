@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/xproj/Demo Flows.md",
+                "file": "xproj/Demo Flows.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pkms/xproj/Chunks to Linked Notes Prompt Chain.md"
+                "file": "xproj/Chunks to Linked Notes Prompt Chain.md"
               }
             }
           }
@@ -166,10 +166,15 @@
   },
   "active": "511942abfaaffb6f",
   "lastOpenFiles": [
+    "vector/__pycache__/chroma_handler.cpython-311.pyc",
+    "vector/__pycache__",
+    "main_clustering.py",
+    "__pycache__/md_parse.cpython-311.pyc",
+    "__pycache__",
     "pkms/george/attachments",
-    "pkms/xproj/CV Project Determination.md",
-    "pkms/xmedia/Pasted image 20241005152731.png",
-    "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
+    "xproj/CV Project Determination.md",
+    "xmedia/Pasted image 20241005152731.png",
+    "xproj/Chunks to Linked Notes Prompt Chain.md",
     "pkms/xproj/From Chunks to Linked Notes.md",
     "pkms/george/Computer Vision History.md",
     "pkms/rifaat/DETR Workflow Summary.md",
@@ -187,7 +192,7 @@
     "pkms/george/What is Computer Vision?.md",
     "pkms/george/Team Directory.md",
     "pkms/george/Project Roadmap.md",
-    "pkms/xproj/Demo Flows.md",
+    "xproj/Demo Flows.md",
     "pkms/suhas/PyTorch Reference.md",
     "pkms/suhas/DETR Model Training.md",
     "pkms/suhas/DETR Model.md",
@@ -197,11 +202,6 @@
     "main.py",
     "vector/chroma_handler.py",
     "vector",
-    "pkms/suhas/attachments",
-    "pkms/rifaat/attachments",
-    "pkms/george/attachments",
-    "pkms/george/information",
-    "pkms/george/projects",
-    "pkms/xmedia"
+    "pkms/suhas/attachments"
   ]
 }
