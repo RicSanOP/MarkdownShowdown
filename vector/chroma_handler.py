@@ -52,10 +52,10 @@ class ChromaHandler:
         output_texts = []
         output_ids = []
 
-        for i in range(len(query_response["distances"])):
-            if query_response["distances"][i] > min_score:
-                output_texts.append(query_response["documents"][i])
-                output_ids.append(query_response["ids"][i])
+        for i in range(len(query_response["distances"][0])):
+            if query_response["distances"][0][i] > min_score:
+                output_texts.append(query_response["documents"][0][i])
+                output_ids.append(query_response["ids"][0][i])
 
         responses = {
             "docs": output_texts,
