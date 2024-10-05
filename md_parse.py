@@ -117,6 +117,7 @@ class Vault:
 
     def __init__(self, user, vault_path):
         self.vault_path = vault_path
+        self.all_chunks = []
         self.user = user
         self.notes = []
         self.load_notes()
