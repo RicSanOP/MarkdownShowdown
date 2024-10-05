@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "2f2f6f6c9f6b38d1",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d98f52c236d427be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pkms/suhas/PyTorch Reference.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "3bddd65af32ffbf1",
         "type": "tabs",
         "children": [
@@ -31,7 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/george/What is Computer Vision?.md",
+                "file": "pkms/xproj/From Chunks to Linked Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "37a49cf8ab759eca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c10effbfa2cc32f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pkms/george/Project Roadmap.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/suhas/PyTorch Reference.md",
+                "file": "pkms/xproj/From Chunks to Linked Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/suhas/PyTorch Reference.md",
+                "file": "pkms/xproj/From Chunks to Linked Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pkms/suhas/PyTorch Reference.md"
+                "file": "pkms/xproj/From Chunks to Linked Notes.md"
               }
             }
           }
@@ -164,41 +164,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d98f52c236d427be",
+  "active": "833e70f4293993c8",
   "lastOpenFiles": [
-    "pkms/suhas/DETR Model Training.md",
     "pkms/suhas/DETR Model.md",
-    "pkms/suhas/Debugging X.md",
+    "pkms/xproj/From Chunks to Linked Notes.md",
+    "pkms/suhas/Model Implementation.md",
+    "pkms/suhas/PyTorch Reference.md",
+    "pkms/rifaat/Convolutional Neural Network.md",
+    "pkms/suhas/Dependency Management.md",
+    "pkms/rifaat/First Training Experiment.md",
+    "pkms/suhas/CNN Backbone.md",
     "pkms/george/Project Roadmap.md",
     "pkms/rifaat/Transformer Encoder-Decoder.md",
+    "pkms/rifaat/Todos.md",
+    "pkms/rifaat/Detection Transformer Model Architecture.md",
+    "pkms/rifaat/DETR Workflow Summary.md",
+    "pkms/rifaat/COCO Dataset.md",
+    "pkms/george/Presentation Plan.md",
+    "pkms/george/Computer Vision History.md",
+    "pkms/george/DETR.md",
+    "pkms/george/Transformers.md",
+    "pkms/george/What is Computer Vision?.md",
+    "pkms/george/Team Directory.md",
+    "pkms/george/CNN.md",
+    "pkms/george/Object Detection Project.md",
+    "pkms/suhas/DETR Model Training.md",
+    "pkms/suhas/Debugging X.md",
     "pkms/rifaat/Useful Commands.md",
     "pkms/rifaat/Transformer Details.md",
-    "pkms/rifaat/Detection Transformer Model Architecture.md",
-    "pkms/rifaat/Convolutional Neural Network.md",
-    "pkms/suhas/Model Implementation.md",
-    "pkms/suhas/CNN Backbone.md",
     "md_parse.py",
     "main.py",
-    "pkms/rifaat/COCO Dataset.md",
-    "pkms/suhas/Dependency Management.md",
-    "pkms/george/Object Detection Project.md",
-    "pkms/george/Team Directory.md",
-    "pkms/george/Tasks.md",
-    "pkms/george/What is Computer Vision?.md",
-    "pkms/george/Presentation Plan.md",
-    "pkms/george/2025-01-02 Meeting.md",
-    "pkms/george/Evaluation Steps.md",
-    "pkms/george/2025-01-01 Meeting.md",
-    "pkms/xproj/Demo Flows.md",
     "vector/chroma_handler.py",
     "vector",
     "pkms/suhas/attachments",
     "pkms/rifaat/attachments",
     "pkms/george/attachments",
-    "pkms/xproj/LMMS Dataset.md",
-    "pkms/george/Installation Steps.md",
-    "pkms/rifaat/Todos.md",
-    "pkms/suhas/2025-01-01.md",
     "pkms/george/information",
     "pkms/george/projects",
     "pkms/xmedia/Pasted image 20241005152731.png",

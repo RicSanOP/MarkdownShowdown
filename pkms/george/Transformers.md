@@ -1,0 +1,5 @@
+# Transformers
+
+Transformers are a type of model architecture introduced by Vaswani et al. in 2017, designed primarily for natural language processing tasks. Unlike recurrent neural networks (RNNs), transformers do not process data sequentially, but instead handle it all at once, making them highly parallelizable and efficient. They are based on the concept of self-attention, which allows the model to weigh the importance of different words in a sentence when encoding or decoding information.
+
+The core components of a transformer model include the encoder and decoder, each composed of stacked layers of multi-head self-attention and feed-forward neural networks. The self-attention mechanism enables the model to understand the context and dependencies between words, regardless of their distance in the sequence. This makes transformers particularly effective for tasks like machine translation, text summarization, and question answering.

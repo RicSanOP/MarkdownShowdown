@@ -1,3 +1,0 @@
-# DETR Model Training
-
-

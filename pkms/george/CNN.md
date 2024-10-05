@@ -1,0 +1,5 @@
+# CNN
+
+Convolutional Neural Networks (CNNs) are the most popular type of computer vision model and are particularly effective for tasks such as image classification, object detection, and facial recognition. They are inspired by the biological processes in which the connectivity pattern between neurons resembles the organization of the animal visual cortex.
+
+The architecture of a CNN typically includes multiple layers: convolutional layers, pooling layers, and fully connected layers. One of the key advantages of CNNs is their ability to learn and extract features directly from raw image data, eliminating the need for manual feature engineering. This capability, combined with their hierarchical structure, allows CNNs to capture complex patterns and relationships within images, making them a powerful tool in the field of computer vision.
