@@ -47,6 +47,7 @@ Knowledge Database Notes are markdown files containing information that is meant
 
 ### Markdown Candidate Proposals
 
+*Abandonned*
 
 ### Markdown Title Suggestion
 
@@ -64,9 +65,66 @@ Knowledge Database Notes are markdown files containing information that is meant
 [[Chunks to Linked Notes Prompt Chain#Context Prompt]]
 [[Chunks to Linked Notes Prompt Chain#Knowledge Database Notes]]
 
-You are going to help us come up with a title for a new markdown note. We are going to provide you with a collection of markdown files and chunks that have tagged with the {INSERT NOTE TYPE HERE} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please suggest a title for this new markdown note and explain why you have decided to go with this title. Feel free to provide references to the provided markdown files and chunks. Please provide your answer in the following JSON format:
+You are going to help us come up with a title for a new markdown note. We are going to provide you with a collection of markdown files and chunks that have tagged with the {INSERT NOTE TYPE HERE} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please generate the following:
+- suggest a title for this new markdown note
+- justify why you have decided to go with this title
+- provide a one paragraph summary of its contents
+- mark down its type as {INSERT NOTE TYPE HERE}
+Feel free to provide references to the provided markdown files and chunks in your justification. Also make sure the summary covers as much information from the markdown files and chunks as possible. Please provide your answer in the following JSON format:
 
 {
 	title: "",
-	justification: ""
+	justification: "",
+	summary: "",
+	type: ""
 }
+
+### Inter-Note Link Suggestion
+
+[[Chunks to Linked Notes Prompt Chain#Context Prompt]]
+
+You are going to help us find links between suggested markdown file candidates. Links show that there are unidirectional semantic connections between 2 notes. They can represent a multitude of things like:
+- A parent-child relation where one note contains another
+- A similarity relation between 2 notes
+- An sibling relation where both notes link to each other
+We are going to provide you with a collection of candidates in the form of a JSON list. An example of the input JSON list can be found below (imagine that the empty strings below have been filled):
+
+[
+	{
+		title: "A",
+		justification: "",
+		summary: "",
+		type: ""
+	},
+	{
+		title: "B",
+		justification: "",
+		summary: "",
+		type: ""
+	},
+	{
+		title: "C",
+		justification: "",
+		summary: "",
+		type: ""
+	}
+]
+
+Please suggest semantic links between these notes in the form of a JSON list which identifies links as combinations of 2 titles. An example of the output JSON list can be found below:
+
+[
+	{
+		title_from: "A",
+		title_to: "B"
+	},
+	{
+		title_from: "A",
+		title_to: "C"
+	},
+	{
+		title_from: "B",
+		title_to: "C"
+	},
+]
+
+### 

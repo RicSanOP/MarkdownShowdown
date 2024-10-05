@@ -164,8 +164,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d54a484531262248",
+  "active": "511942abfaaffb6f",
   "lastOpenFiles": [
+    "pkms/george/attachments",
     "pkms/xproj/CV Project Determination.md",
     "pkms/xmedia/Pasted image 20241005152731.png",
     "pkms/xproj/Chunks to Linked Notes Prompt Chain.md",
@@ -192,7 +193,6 @@
     "pkms/suhas/DETR Model.md",
     "pkms/suhas/Debugging X.md",
     "pkms/rifaat/Useful Commands.md",
-    "pkms/rifaat/Transformer Details.md",
     "md_parse.py",
     "main.py",
     "vector/chroma_handler.py",
