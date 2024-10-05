@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/george/2025-01-02 Meeting.md",
+                "file": "pkms/suhas/CNN Backbone.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/george/2025-01-02 Meeting.md",
+                "file": "pkms/suhas/CNN Backbone.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/george/2025-01-02 Meeting.md",
+                "file": "pkms/suhas/CNN Backbone.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pkms/george/2025-01-02 Meeting.md"
+                "file": "pkms/suhas/CNN Backbone.md"
               }
             }
           }
@@ -166,14 +166,18 @@
   },
   "active": "d98f52c236d427be",
   "lastOpenFiles": [
-    "pkms/george/What is Computer Vision?.md",
-    "pkms/george/Team Directory.md",
-    "pkms/george/Object Detection Project.md",
-    "pkms/george/Tasks.md",
-    "pkms/george/Presentation Plan.md",
     "pkms/george/Project Roadmap.md",
-    "pkms/george/Evaluation Steps.md",
+    "pkms/suhas/CNN Backbone.md",
+    "pkms/rifaat/COCO Dataset.md",
+    "pkms/suhas/DETR Model Training.md",
+    "pkms/suhas/Dependency Management.md",
+    "pkms/george/Object Detection Project.md",
+    "pkms/george/Team Directory.md",
+    "pkms/george/Tasks.md",
+    "pkms/george/What is Computer Vision?.md",
+    "pkms/george/Presentation Plan.md",
     "pkms/george/2025-01-02 Meeting.md",
+    "pkms/george/Evaluation Steps.md",
     "pkms/george/2025-01-01 Meeting.md",
     "pkms/xproj/Demo Flows.md",
     "vector/chroma_handler.py",
@@ -186,17 +190,13 @@
     "pkms/george/Installation Steps.md",
     "pkms/rifaat/Todos.md",
     "pkms/suhas/2025-01-01.md",
-    "pkms/suhas/DETR Model Training.md",
     "pkms/suhas/PyTorch Reference.md",
-    "pkms/suhas/CNN Implementation.md",
     "pkms/suhas/Debugging X.md",
     "pkms/rifaat/Third Training Experiment.md",
     "pkms/rifaat/Second Training Experiment.md",
     "pkms/rifaat/First Training Experiment.md",
     "pkms/george/2025-01-01.md",
     "pkms/suhas/2025-01-02.md",
-    "pkms/rifaat/2025-01-02.md",
-    "pkms/rifaat/2025-01-01.md",
     "pkms/george/information",
     "pkms/george/projects",
     "pkms/xmedia/Pasted image 20241005152731.png",

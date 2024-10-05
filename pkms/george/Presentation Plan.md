@@ -1,6 +1,6 @@
 # Presentation Plan
 
-End-to-End Object Detection with Transformers (DETR)
+Here is the structure of the presentation I will be giving to the CTO:
 - **Introduction to the Project**  
   - Brief explanation of DETR (Detection Transformer).  
   - Importance of Transformers in object detection.  
