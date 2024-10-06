@@ -1,10 +1,10 @@
 import os
+import re
 import base64
 import obsidiantools.api as otools
 import pathlib
 from bs4 import BeautifulSoup
 from mistralai import Mistral
-import os
 
 mistral = Mistral(
     api_key=os.getenv("MISTRAL_API_KEY", ""),
@@ -18,12 +18,13 @@ class ImageProcessor:
         """Encode the image to base64."""
         try:
             with open(image_path, "rb") as image_file:
-                return base64.b64encode(image_file.read()).decode("utf-8")
+                img_file = image_file.read()
+                return base64.b64encode(img_file).decode("utf-8")
         except FileNotFoundError:
             print(f"Error: The file {image_path} was not found.")
             return None
         except Exception as e:
-            print(f"Error: {e}")
+            print(e)
             return None
 
     @staticmethod
@@ -42,7 +43,7 @@ class ImageProcessor:
                     },
                     {
                         "type": "image_url",
-                        "image_url": f"data:image/jpeg;base64,{base64_image}",
+                        "image_url": f"data:image/png;base64,{base64_image}",
                     },
                 ],
             }
@@ -55,7 +56,7 @@ class ImageProcessor:
         return chat_response.choices[0].message.content
 
     @staticmethod
-    def replace_images_with_desc(markdown_string):
+    def replace_images_with_desc(markdown_string, vault_path):
         # regex pattern to match ![[name]] where "name" is the image name
         pattern = r"!\[\[([^\]]+)\]\]"
 
@@ -63,9 +64,8 @@ class ImageProcessor:
 
         # Replace each instance of ![[name]] with its description
         for image_name in image_names:
-            image_path = f"../attachments/{image_name}"
-            encoded = ImageProcessor.encode_image(image_path)
-            description = ImageProcessor.get_image_description(encoded)
+            image_path = f"{vault_path}/attachments/{image_name}"
+            description = ImageProcessor.get_image_description(image_path)
             markdown_string = markdown_string.replace(f"![[{image_name}]]", description)
 
         return markdown_string
@@ -130,8 +130,10 @@ class Note:
                 chunk.insert(0, info_chunk)
             if not info_chunk.string:
                 info_chunk.string = ""
-                
-            info_chunk.string += "\nNote Path: " + str(self.rel_path) + "\nAuthor: " + str(self.user)
+
+            info_chunk.string += (
+                "\nNote Path: " + str(self.rel_path) + "\nAuthor: " + str(self.user)
+            )
 
             # iterate through chunks and prompt for a succinct context if it is greater than 1000 characters
             # for chunk in chunks:
@@ -141,6 +143,9 @@ class Note:
                 """
                 shortened_chunk = query(prompt, "mistral-small-latest", max_tokens=300)
                 chunk.string = shortened_chunk.find("chunk").string[0:1000]
+            chunk.string = ImageProcessor.replace_images_with_desc(
+                str(chunk), self.vault_path
+            )
 
         output_tuples = []
 
