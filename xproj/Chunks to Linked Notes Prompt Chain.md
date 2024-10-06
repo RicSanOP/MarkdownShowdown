@@ -47,7 +47,7 @@ Knowledge Database Notes are markdown files containing information that is meant
 
 ##### Wildcard Notes
 
-Wildcard Notes are markdown files containing new information not found in prior notes that could still be relevant to the project. These could be notes suggesting new tasks for the team, areas  
+Wildcard Notes are markdown files containing new information not found in prior notes that could still be relevant to the project. These could be notes suggesting new tasks for the team, areas of the project that could be covered in more detail or information in the problem space that could add context. Keep the notes on this new information brief so as to be inviting to team members to explore and discover new possible areas to focus on.
 
 ### Markdown Candidate Proposals
 
