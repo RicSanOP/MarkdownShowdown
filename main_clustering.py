@@ -14,8 +14,8 @@ from openai import OpenAI
 
 import sys
 
-#path = "pkms"
-path = "toy/inputs"
+path = "pkms"
+#path = "toy/inputs"
 
 all_vectors = []
 all_texts = []
