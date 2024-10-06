@@ -12,7 +12,6 @@ import sys
 
 path = "pkms"
 
-all_users = get_list_of_users(path)
 all_vectors = []
 all_texts = []
 all_tags = []
@@ -61,6 +60,8 @@ if sys.argv and len(sys.argv) > 1 and sys.argv[1] == "speed":
     all_texts = json.load(open("all_texts.json"))
     all_tags = json.load(open("all_tags.json"))
 else:
+    all_users = get_list_of_users(path)
+
     db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
 
     for user in all_users:
