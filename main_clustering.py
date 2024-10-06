@@ -88,23 +88,18 @@ else:
     db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
     all_users = get_list_of_users(path)
 
-
-    for i in range(0, len(texts)):
-        texts[i] = (
-            texts[i]
-            .replace("<chunk>", "")
-            .replace("</chunk>", "")
-            .replace("<info>", "")
-            .replace("</info>", "")
-        )
-
-
     for user in all_users:
         chunks = user.all_chunks
         texts = [str(chunk[1]) for chunk in chunks]
 
         for i in range(0, len(texts)):
-            texts[i] = texts[i].replace("<chunk>", "").replace("</chunk>", "").replace("<info>", "").replace("</info>", "")
+            texts[i] = (
+                texts[i]
+                .replace("<chunk>", "")
+                .replace("</chunk>", "")
+                .replace("<info>", "")
+                .replace("</info>", "")
+            )
 
         ids = [str(chunk[0]) for chunk in chunks]
 
@@ -150,16 +145,11 @@ else:
             if img_path:
                 tags["image"] = img_path
             tags_list.append(tags)
-        
-        db_handler.add_docs_with_embeddings(
-            texts,
-            ids, 
-            tags_list
-        )
+
+        db_handler.add_docs_with_embeddings(texts, ids, tags_list)
         all_vectors.extend(db_handler.get_text_embeddings(texts))
         all_texts.extend(texts)
         all_tags.extend(tags_list)
-
 
 
 TAG_PROMPTS = {
@@ -200,7 +190,8 @@ PROPER_TAG_NAMES = {
 def get_note_blurb_json(chunks, tag_name):
     prompt = TAG_PROMPTS["general"]
     prompt += TAG_PROMPTS[tag_name]
-    prompt += f"""
+    prompt += (
+        f"""
     You are going to help us come up with a title for a new markdown note. When generating a title, strike a balance between suggesting a simple title and one that encompasses the information provided. We are going to provide you with a collection of markdown files and chunks that have tagged with the {PROPER_TAG_NAMES[tag_name]} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please generate the following:
 
     - suggest a title for this new markdown note
@@ -248,7 +239,7 @@ for tag_name in next(iter(all_tags)).keys():
     for cluster in clusters:
         texts = clusters[cluster]
         cluster_json = get_note_blurb_json(texts, tag_name)
-        cluster_json['chunks']  = texts
+        cluster_json["chunks"] = texts
         all_notes_json_blurbs[tag_name].append(cluster_json)
 
 
@@ -333,11 +324,19 @@ for link_data in links:
 TAG_NAME_TO_FOLDER = {"task": "tasks", "project": "docs", "knowledge": "notes"}
 
 from datetime import datetime
+
 time_str = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
 
-for tag_name in all_notes_json_blurbs:    
-    os.makedirs("../outputs-" + time_str + f"/{TAG_NAME_TO_FOLDER[tag_name]}", exist_ok=True)
+for tag_name in all_notes_json_blurbs:
+    os.makedirs(
+        "../outputs-" + time_str + f"/{TAG_NAME_TO_FOLDER[tag_name]}", exist_ok=True
+    )
     for note_json in all_notes_json_blurbs[tag_name]:
         final_markdown = build_final_markdown(note_json, tag_name)
-        with open("../outputs-" + time_str + f"/{TAG_NAME_TO_FOLDER[tag_name]}/{note_json['title']}.md", "w") as f:
+        with open(
+            "../outputs-"
+            + time_str
+            + f"/{TAG_NAME_TO_FOLDER[tag_name]}/{note_json['title']}.md",
+            "w",
+        ) as f:
             f.write(final_markdown)
