@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "pkms/rifaat/Week 4 Report.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xproj/Demo Flows.md",
+                "file": "pkms/george/Tasks.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "pkms/rifaat/Week 4 Report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "pkms/rifaat/Week 4 Report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md"
+                "file": "pkms/rifaat/Week 4 Report.md"
               }
             }
           }
@@ -166,39 +166,44 @@
   },
   "active": "d54a484531262248",
   "lastOpenFiles": [
+    "pkms/rifaat/Week 3 Report.md",
+    "pkms/rifaat/Week 4 Report.md",
+    "pkms/rifaat/Week 2 Report.md",
+    "pkms/rifaat/Week 1 Report.md",
+    "pkms/rifaat/attachments/Pasted image 20241006085354.png",
+    "pkms/suhas/Dependency Management.md",
+    "pkms/suhas/DETR Project Overview.md",
+    "pkms/suhas/Devlog.md",
+    "pkms/suhas/Model Implementation.md",
+    "pkms/suhas/Project Reflections.md",
+    "pkms/suhas/PyTorch Reference.md",
+    "pkms/rifaat/attachments/Pasted image 20241006085047.png",
+    "pkms/rifaat/attachments/Pasted image 20241006085015.png",
+    "pkms/rifaat/attachments/Pasted image 20241006084955.png",
+    "pkms/suhas/attachments/Pasted image 20241006084835.png",
+    "xmedia/Pasted image 20241005152731.png",
+    "pkms/suhas/Debugging X.md",
+    "pkms/suhas/CNN Backbone.md",
+    "pkms/suhas/2025-01-02.md",
+    "pkms/george/Meeting Notes Week 3.md",
+    "pkms/george/Tasks.md",
+    "pkms/george/Meeting Notes Week 1.md",
+    "pkms/george/Meeting Notes Week 2.md",
+    "pkms/rifaat/Todos.md",
+    "pkms/george/Meeting Notes Week 4.md",
+    "pkms/george/Project Roadmap.md",
+    "pkms/george/What is Computer Vision?.md",
     "pkms/george/DETR.md",
+    "pkms/george/Object Detection Project.md",
+    "pkms/george/Computer Vision History.md",
+    "xproj/Demo Flows.md",
     "pkms/george/attachments/Pasted image 20241006020017.png",
-    "xproj/Chunks to Linked Notes Prompt Chain.md",
     "vector/__pycache__/chroma_handler.cpython-311.pyc",
     "vector/__pycache__",
     "main_clustering.py",
     "__pycache__/md_parse.cpython-311.pyc",
     "__pycache__",
     "pkms/george/attachments",
-    "xproj/CV Project Determination.md",
-    "xmedia/Pasted image 20241005152731.png",
-    "pkms/xproj/From Chunks to Linked Notes.md",
-    "pkms/george/Computer Vision History.md",
-    "pkms/rifaat/DETR Workflow Summary.md",
-    "pkms/george/Transformers.md",
-    "pkms/george/CNN.md",
-    "pkms/suhas/Dependency Management.md",
-    "pkms/suhas/Model Implementation.md",
-    "pkms/rifaat/Third Training Experiment.md",
-    "pkms/rifaat/Second Training Experiment.md",
-    "pkms/rifaat/Transformer Encoder-Decoder.md",
-    "pkms/rifaat/First Training Experiment.md",
-    "pkms/rifaat/Detection Transformer Model Architecture.md",
-    "pkms/rifaat/Convolutional Neural Network.md",
-    "pkms/george/What is Computer Vision?.md",
-    "pkms/george/Team Directory.md",
-    "pkms/george/Project Roadmap.md",
-    "xproj/Demo Flows.md",
-    "pkms/suhas/PyTorch Reference.md",
-    "pkms/suhas/DETR Model Training.md",
-    "pkms/suhas/DETR Model.md",
-    "pkms/suhas/Debugging X.md",
-    "pkms/rifaat/Useful Commands.md",
     "md_parse.py",
     "main.py",
     "vector/chroma_handler.py",

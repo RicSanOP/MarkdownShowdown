@@ -1,1 +1,0 @@
-# Third Training Experiment
