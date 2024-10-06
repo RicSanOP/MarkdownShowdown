@@ -150,7 +150,7 @@ def get_note_blurb_json(chunks, tag_name):
     prompt = TAG_PROMPTS["general"]
     prompt += TAG_PROMPTS[tag_name]
     prompt += f"""
-    You are going to help us come up with a title for a new markdown note. We are going to provide you with a collection of markdown files and chunks that have tagged with the {PROPER_TAG_NAMES[tag_name]} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please generate the following:
+    You are going to help us come up with a title for a new markdown note. When generating a title, strike a balance between suggesting a simple title and one that encompasses the information provided. We are going to provide you with a collection of markdown files and chunks that have tagged with the {PROPER_TAG_NAMES[tag_name]} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please generate the following:
 
     - suggest a title for this new markdown note
     - justify why you have decided to go with this title
