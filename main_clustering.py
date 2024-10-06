@@ -57,8 +57,8 @@ def get_text_embeddings(sentences):
 # add system arg for speed mode
 
 if sys.argv and len(sys.argv) > 1 and sys.argv[1] == "speed":
-    all_texts = json.load(open("all_texts.json"))
-    all_tags = json.load(open("all_tags.json"))
+    all_texts = json.load(open("texts.json"))
+    all_tags = json.load(open("tags.json"))
 else:
     all_users = get_list_of_users(path)
 
