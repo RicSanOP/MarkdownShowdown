@@ -54,6 +54,8 @@ class ImageProcessor:
             }
         ]
         
+        return image_path
+        
         chat_response = mistral.chat.complete(
             model="pixtral-12b-2409", messages=messages, max_tokens=200
         )
@@ -116,7 +118,7 @@ class Note:
         prompt = f"""
         We are trying to split the following markdown content into distinct chunks of markdown that are each less than {Note.NUM_CHARS_PER_CHUNK} characters long.
         Each chunk should be a complete idea and we want to split it as best as possible.
-        Please output chunks using the <chunk> and </chunk> tags and leave the content as unchanged as possible.
+        Please output chunks using the <chunk> and </chunk> tags and leave the content as unchanged as possible. Make sure each image is in it's own chunk.
 
         At the top of each chunk you must always include a <info> </info> tag with a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
 
