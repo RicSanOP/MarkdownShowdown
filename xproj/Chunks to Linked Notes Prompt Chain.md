@@ -45,6 +45,10 @@ Project Documentation Notes are markdown files containing information on the pro
 
 Knowledge Database Notes are markdown files containing information that is meant to educate on the problem space. These are more independent from the project's development and are meant to assist the author in better understanding the problem they are trying to solve. The hope is that some of this knowledge can come in handy when justifying current approaches in the project and/or offer solutions to future potential problems.
 
+##### Wildcard Notes
+
+Wildcard Notes are markdown files containing new information not found in prior notes that could still be relevant to the project. These could be notes suggesting new tasks for the team, areas of the project that could be covered in more detail or information in the problem space that could add context. Keep the notes on this new information brief so as to be inviting to team members to explore and discover new possible areas to focus on.
+
 ### Markdown Candidate Proposals
 
 *Abandonned*
@@ -65,7 +69,7 @@ Knowledge Database Notes are markdown files containing information that is meant
 [[Chunks to Linked Notes Prompt Chain#Context Prompt]]
 [[Chunks to Linked Notes Prompt Chain#Knowledge Database Notes]]
 
-You are going to help us come up with a title for a new markdown note. We are going to provide you with a collection of markdown files and chunks that have tagged with the {INSERT NOTE TYPE HERE} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please generate the following:
+You are going to help us come up with a title for a new markdown note. When generating a title, strike a balance between suggesting a simple title and one that encompasses the information provided. We are going to provide you with a collection of markdown files and chunks that have tagged with the {INSERT NOTE TYPE HERE} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please generate the following:
 - suggest a title for this new markdown note
 - justify why you have decided to go with this title
 - provide a one paragraph summary of its contents
