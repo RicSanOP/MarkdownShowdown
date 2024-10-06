@@ -1,8 +1,9 @@
-import os
-import re
 import base64
-import obsidiantools.api as otools
+import os
 import pathlib
+import re
+
+import obsidiantools.api as otools
 from bs4 import BeautifulSoup
 from mistralai import Mistral
 
@@ -66,7 +67,7 @@ class ImageProcessor:
         for image_name in image_names:
             image_path = f"{vault_path}/attachments/{image_name}"
             description = ImageProcessor.get_image_description(image_path)
-            markdown_string = markdown_string.replace(f"![[{image_name}]]", description)
+            markdown_string = markdown_string.replace(f"![[{image_name}]]", f"IMAGE:{image_path} - description)
 
         return markdown_string
 

@@ -1,13 +1,16 @@
-from md_parse import get_list_of_users
-from bertopic import BERTopic
-from umap import UMAP
-from mistralai import Mistral
-import os
-from hdbscan import HDBSCAN
-from vector.chroma_handler import ChromaHandler
-from collections import defaultdict
-import json
 import itertools
+import json
+import os
+import re
+from collections import defaultdict
+
+from bertopic import BERTopic
+from hdbscan import HDBSCAN
+from mistralai import Mistral
+from umap import UMAP
+
+from md_parse import get_list_of_users
+from vector.chroma_handler import ChromaHandler
 
 path = "pkms"
 
@@ -51,6 +54,13 @@ def get_text_embeddings(sentences):
     ]
     return embeddings
 
+def extract_img_path(text):
+    match = re.search(r'IMAGE:([^\s-]+)', text)  # NOTE: expects "IMAGE:/path/subpath - some more text"
+
+    if match:
+        path = match.group(1)
+        return path
+
 db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
 
 for user in all_users:
@@ -82,8 +92,10 @@ for user in all_users:
 
         Knowledge Database Notes
         Knowledge Database Notes are markdown files containing information that is meant to educate on the problem space. These are more independent from the project's development and are meant to assist the author in better understanding the problem they are trying to solve. The hope is that some of this knowledge can come in handy when justifying current approaches in the project and/or offer solutions to future potential problems.
+        Images
+        If the text is the description of an image, put image
 
-        Please output the tag(s) as follows: tags: [tag1, tag2, tag3] where the tag options are task, project, knowledge. Each piece of content has one or more tags.
+        Please output the tag(s) as follows: tags: [tag1, tag2, tag3, tag4] where the tag options are task, project, knowledge, image. Each piece of content has one or more tags.
 
         Example Output:
         tags: [task, project]
@@ -91,7 +103,7 @@ for user in all_users:
         Input Content for Classification: {text}
         """
         tags_txt = query(classification_prompt, "mistral-large-latest", 100)
-        tags = {"task": False, "project": False, "knowledge": False}
+        tags = {"task": False, "project": False, "knowledge": False, "image": False}
 
         if "task" in tags_txt:
             tags["task"] = True
@@ -99,6 +111,9 @@ for user in all_users:
             tags["project"] = True
         if "knowledge" in tags_txt:
             tags["knowledge"] = True
+        if "image" in tags_txt:
+            del tags["image"]
+            tags["image_path"] = extract_img_path(text)
 
         tags_list.append(tags)
     
@@ -112,6 +127,7 @@ for user in all_users:
     all_tags.extend(tags_list)
 
 import IPython
+
 IPython.embed()
 
 TAG_PROMPTS = {
