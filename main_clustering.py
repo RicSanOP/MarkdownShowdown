@@ -255,9 +255,9 @@ for tag_name in ["task", "project", "knowledge"]:
     for i in range(len(all_tags)):
         if all_tags[i][tag_name]:
             tagged_texts.append(all_texts[i])
-    umap_model = UMAP(n_neighbors=5, n_components=10, min_dist=0.0, metric="cosine")
+    umap_model = UMAP(n_neighbors=5, n_components=5, min_dist=0.0, metric="cosine")
     hdbscan_model = HDBSCAN(
-        min_samples=5, gen_min_span_tree=True, prediction_data=True, min_cluster_size=3
+        min_samples=5, gen_min_span_tree=True, prediction_data=True, min_cluster_size=5
     )
     topic_model = BERTopic(umap_model=umap_model, hdbscan_model=hdbscan_model)
     matrix, _ = topic_model.fit_transform(all_texts)

@@ -54,6 +54,8 @@ class ImageProcessor:
             }
         ]
         
+        return image_path
+        
         chat_response = mistral.chat.complete(
             model="pixtral-12b-2409", messages=messages, max_tokens=200
         )
