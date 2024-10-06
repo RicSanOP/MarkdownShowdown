@@ -4,7 +4,6 @@ from umap import UMAP
 from mistralai import Mistral
 import os
 from hdbscan import HDBSCAN
-from vector.chroma_handler import ChromaHandler
 from collections import defaultdict
 import json
 import itertools
@@ -62,8 +61,6 @@ if sys.argv and len(sys.argv) > 1 and sys.argv[1] == "speed":
 else:
     all_users = get_list_of_users(path)
 
-    db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
-
     for user in all_users:
         chunks = user.all_chunks
         texts = [str(chunk[1]) for chunk in chunks]
@@ -113,12 +110,12 @@ else:
 
             tags_list.append(tags)
         
-        db_handler.add_docs_with_embeddings(
+        """db_handler.add_docs_with_embeddings(
             texts,
             ids, 
             tags_list
         )
-        all_vectors.extend(db_handler.get_text_embeddings(texts))
+        all_vectors.extend(db_handler.get_text_embeddings(texts))"""
         all_texts.extend(texts)
         all_tags.extend(tags_list)
 
@@ -206,6 +203,12 @@ for tag_name in next(iter(all_tags)).keys():
         all_notes_json_blurbs[tag_name].append(cluster_json)
 
 def get_cluster_links(json_blurbs):
+    from deepcopy import deepcopy
+    json_blurbs_copy = deepcopy(json_blurbs)
+    # remove the chunks field from the json_blurbs_copy
+    for tag_name in json_blurbs_copy:
+        for note in json_blurbs_copy[tag_name]:
+            note.pop("chunks", None)
     prompt = TAG_PROMPTS["general"]
     
     prompt += """
