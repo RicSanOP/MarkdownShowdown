@@ -231,22 +231,25 @@ for tag_name in next(iter(all_tags)).keys():
     topic_model = BERTopic(umap_model=umap_model, hdbscan_model=hdbscan_model)
     matrix, _ = topic_model.fit_transform(all_texts)
 
-    clusters = defaultdict(list)
+    clusters = defaultdict(lambda: defaultdict(list))
 
     for i in range(len(matrix)):
-        clusters[matrix[i]].append(all_texts[i])
+        if "image" in all_tags[i]:
+            clusters[matrix[i]]['image'].append({"description": all_tags[i]['image'], "path": all_tags[i]['image']})
+        else:
+            clusters[matrix[i]]['text'].append(all_texts[i])
 
     all_notes_json_blurbs[tag_name] = []
 
     for cluster in clusters:
-        texts = clusters[cluster]
-        cluster_json = get_note_blurb_json(texts, tag_name)
-        cluster_json["chunks"] = texts
+        cluster_json = get_note_blurb_json(clusters[cluster]['text'], tag_name)
+        cluster_json["chunks"] = clusters[cluster]['text']
+        cluster_json["images"] = clusters[cluster]['image']
         all_notes_json_blurbs[tag_name].append(cluster_json)
 
 
 def get_cluster_links(json_blurbs):
-    from deepcopy import deepcopy
+    from copy import deepcopy
     json_blurbs_copy = deepcopy(json_blurbs)
     # remove the chunks field from the json_blurbs_copy
     for tag_name in json_blurbs_copy:
