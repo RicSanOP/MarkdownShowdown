@@ -230,8 +230,8 @@ def get_cluster_links(json_blurbs):
     """
     
     prompt += """
-    Please provide your answer in the following JSON format:
-    { links: [ { title_from: "", title_to: "" }, { title_from: "", title_to: "" }, { title_from: "", title_to: "" } ] }
+    Please provide the links in the following JSON format:
+    { [ { title_from: "", title_to: "" }, { title_from: "", title_to: "" }, { title_from: "", title_to: "" } ] }
     """
     
     output_json = query_json(prompt, "mistral-large-latest", 10000)
@@ -270,7 +270,7 @@ def build_final_markdown(note_json, tag_name):
 links = get_cluster_links(all_notes_json_blurbs)
 all_notes_jsons = itertools.chain(*all_notes_json_blurbs.values())
 
-for link_data in links['links']:
+for link_data in links:
     for note in all_notes_jsons:
         if note["title"] == link_data["title_from"]:
             if "links" not in note:
