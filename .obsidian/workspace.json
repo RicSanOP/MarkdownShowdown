@@ -18,7 +18,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                    "file": "xproj/Project Overview.md",
                     "mode": "source",
                     "source": false
                   }
@@ -63,8 +63,8 @@
                         "useWin32Conhost": true
                       },
                       "serial": {
-                        "columns": 111,
-                        "data": "rifirb16-pop% ",
+                        "columns": 104,
+                        "data": "rifirb16-pop% \u001b[32mls\r\n\u001b[34;1mDesktop\u001b[0m  \u001b[34;1mDocuments\u001b[0m  \u001b[34;1mDownloads\u001b[0m  ecsync.log  \u001b[34;1mMusic\u001b[0m  \u001b[34;1mPictures\u001b[0m  \u001b[34;1mPublic\u001b[0m  \u001b[34;1mTemplates\u001b[0m  \u001b[34;1mVideos\r\n\u001b[0mrifirb16-pop% \u001b[32mcd\u001b[0m \u001b[4m/storage/linux/Projects/markdown_showdown/MarkdownShowdown\r\n\u001b[0mrifirb16-pop% \u001b[32mls\r\n\u001b[34;1mback\u001b[0m                main.py      \u001b[34;1mpkms\u001b[0m        requirements.txt  tags.json   \u001b[34;1mvector\r\n\u001b[0mgenerate.py         md_parse.py  README.md   \u001b[34;1msrc\u001b[0m               texts.json  \u001b[34;1mxmedia\r\n\u001b[0mmain_clustering.py  \u001b[34;1moutputs\u001b[0m      report.txt  summary.txt       \u001b[34;1mtoy\u001b[0m         \u001b[34;1mxproj\r\n\u001b[0mrifirb16-pop% \u001b[32mpython3\u001b[0m \u001b[4mgenerate.py\u001b[0m \r\nTraceback (most recent call last):\r\n  File \"/storage/linux/Projects/markdown_showdown/MarkdownShowdown/generate.py\", line 5, in <module>\r\n    from tqdm import tqdm\r\nModuleNotFoundError: No module named 'tqdm'\r\nrifirb16-pop% \u001b[32mpip\u001b[0m install tqdm   \r\nDefaulting to user installation because normal site-packages is not writeable\r\nCollecting tqdm\r\n  Downloading tqdm-4.66.5-py3-none-any.whl (78 kB)\r\n     \u001b[38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m78.4/78.4 KB\u001b[0m \u001b[31m3.3 MB/s\u001b[0m eta \u001b[36m0:00:00\r\n\u001b[0mInstalling collected packages: tqdm\r\n\u001b[33m  WARNING: The script tqdm is installed in '/home/rifsam/.local/bin' which is not on PATH.\r\n  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.\r\n\u001b[0mSuccessfully installed tqdm-4.66.5\r\nrifirb16-pop% \u001b[32mpython3\u001b[0m \u001b[4mgenerate.py\r\n\u001b[0mSyncing team notes across multiple sources...\r\nNotes successfully synced.\r\nMerging notes from different team members...\r\nCleaning up temporary data...\r\nTemporary data cleaned.\r\nPerforming final sync operation to ensure all notes are up-to-date...\r\nQuerying the LLMs/vector DB for the note merging process. Please wait...\r\nFinalizing: 100%|###################################################| 20/20 [00:20<00:00,  1.01s/it]\r\nMerged notes created successfully.\r\nrifirb16-pop% ",
                         "rows": 11
                       }
                     }
@@ -152,6 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "xproj/Project Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,6 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "xproj/Project Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +180,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "xproj/Project Overview.md"
+              }
             }
           }
         ]
@@ -211,11 +215,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 369.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -230,23 +235,24 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "e7d881d0ebe6228b",
+  "active": "7088a8fe7fda577d",
   "lastOpenFiles": [
+    "xproj/Project Overview.md",
+    "xproj/Chunks to Linked Notes Prompt Chain.md",
+    "toy/outputs/Earth, Europe, and the UK - A Unified Overview.md",
+    "toy/outputs",
     "src/vector/__pycache__/chroma_handler.cpython-311.pyc",
     "src/vector/__pycache__",
     "src/vector",
     "src",
-    "outputs-2024-10-06-12-55-42/notes/Geographical and Cultural Overview of the United Kingdom.md",
-    "outputs-2024-10-06-12-55-42/notes/Geographical Overview of Europe and Earth.md",
-    "outputs-2024-10-06-12-55-42/notes",
-    "outputs-2024-10-06-12-55-42",
+    "outputs/outputs-2024-10-06-12-55-42/notes/Geographical and Cultural Overview of the United Kingdom.md",
+    "outputs/outputs-2024-10-06-12-55-42/notes/Geographical Overview of Europe and Earth.md",
+    "outputs/outputs-2024-10-06-12-55-42/notes",
+    "outputs/outputs-2024-10-06-12-55-42",
     "back/outputs/Earth, Europe, and the UK - A Unified Overview.md",
     "back/outputs",
     "back",
     "__pycache__/md_parse.cpython-311.pyc",
-    "__pycache__",
-    "xproj/Chunks to Linked Notes Prompt Chain.md",
-    "smart-chats",
     "Untitled 1.md",
     "Untitled.md",
     "pkms/team/tasks/Essential Command-Line Tools for System Management and Networking.md",
@@ -267,7 +273,6 @@
     "outputs/outputs-2024-10-06-07-45-08/docs/Comprehensive Overview of DETR Model Architecture and Implementation.md",
     "xproj/CV Project Determination.md",
     "outputs/outputs-2024-10-06-07-45-08/tasks/Team Task Management and Meeting Summaries.md",
-    "outputs/outputs-2024-10-06-07-45-08/tasks/Performance Optimization Tasks and Meeting Notes.md",
     "toy/inputs/charlie/attachments/Pasted image 20241006105037.png",
     "toy/inputs/bob/attachments/Pasted image 20241006104823.png",
     "toy/inputs/alice/attachments/Pasted image 20241006103914.png",

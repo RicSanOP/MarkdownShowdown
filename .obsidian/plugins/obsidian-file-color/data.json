@@ -44,19 +44,23 @@
     },
     {
       "path": "toy",
-      "color": "xksB87yzJuZwimv8orr4h"
-    },
-    {
-      "path": "vector",
       "color": "kA9gBhF7NoIGxv04MEFfN"
     },
     {
-      "path": "xmedia",
+      "path": "vector",
       "color": "FOzxzAObhnZIP9-FnL1Ra"
+    },
+    {
+      "path": "xmedia",
+      "color": "ra2vDm0dtibCWWX7fvomY"
     },
     {
       "path": "xproj",
       "color": "ra2vDm0dtibCWWX7fvomY"
+    },
+    {
+      "path": "src",
+      "color": "xksB87yzJuZwimv8orr4h"
     }
   ]
 }
