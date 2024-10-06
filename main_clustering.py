@@ -19,6 +19,7 @@ all_vectors = []
 all_texts = []
 all_tags = []
 
+
 mistral = Mistral(
     api_key=os.getenv("MISTRAL_API_KEY", ""),
 )
@@ -126,9 +127,6 @@ for user in all_users:
     all_texts.extend(texts)
     all_tags.extend(tags_list)
 
-import IPython
-
-IPython.embed()
 
 TAG_PROMPTS = {
     "task": """Task Management Notes
@@ -195,8 +193,8 @@ for tag_name in next(iter(all_tags)).keys():
     for i in range(len(all_tags)):
         if all_tags[i][tag_name]:
             tagged_texts.append(all_texts[i])
-    umap_model = UMAP(n_neighbors=5, n_components=10, min_dist=0.0, metric='cosine')
-    hdbscan_model = HDBSCAN(min_samples=3, gen_min_span_tree=True, prediction_data=True, min_cluster_size=3)
+    umap_model = UMAP(n_neighbors=5, n_components=15, min_dist=0.0, metric='cosine')
+    hdbscan_model = HDBSCAN(min_samples=7, gen_min_span_tree=True, prediction_data=True, min_cluster_size=4)
     topic_model = BERTopic(umap_model=umap_model, hdbscan_model=hdbscan_model)
     matrix, _ = topic_model.fit_transform(all_texts)
 
@@ -208,8 +206,8 @@ for tag_name in next(iter(all_tags)).keys():
     all_notes_json_blurbs[tag_name] = []
     
     for cluster in clusters:
-        vectors = [all_vectors[all_texts.index(text)] for text in clusters[cluster]]
-        cluster_json = get_note_blurb_json(vectors, tag_name)
+        texts = clusters[cluster]
+        cluster_json = get_note_blurb_json(texts, tag_name)
         all_notes_json_blurbs[tag_name].append(cluster_json)
 
 def get_cluster_links(json_blurbs):
@@ -229,9 +227,10 @@ def get_cluster_links(json_blurbs):
 
     [ { title_from: "A", title_to: "B" }, { title_from: "A", title_to: "C" }, { title_from: "B", title_to: "C" }, ]}
     """
+    
     prompt += f"""
     Use the following notes provided in a JSON list format:
-    {json.dumps(itertools.chain(*json_blurbs))}
+    {json.dumps(list(itertools.chain(*(json_blurbs.values()))))}
     \n
     """
     
@@ -269,16 +268,19 @@ def build_final_markdown(note_json, tag_name):
     Remember that the output is markdown so please respect the syntax of the format.
     """
     
+    output_markdown = query(prompt, "mistral-large-latest", 10000)
+    return output_markdown
+    
 
 links = get_cluster_links(all_notes_json_blurbs)
 all_notes_jsons = itertools.chain(*all_notes_json_blurbs.values())
 
-for link in links:
+for link_data in links['links']:
     for note in all_notes_jsons:
-        if note["title"] == link["title_from"]:
+        if note["title"] == link_data["title_from"]:
             if "links" not in note:
                 note["links"] = []
-            note["links"].append(link["title_to"])
+            note["links"].append(link_data["title_to"])
               
 TAG_NAME_TO_FOLDER = {
     "task": "tasks",
@@ -286,11 +288,14 @@ TAG_NAME_TO_FOLDER = {
     "knowledge": "notes"
 }
 
-for tag_name in all_notes_json_blurbs:        
-    os.makedirs(f"../outputs/{TAG_NAME_TO_FOLDER[tag_name]}", exist_ok=True)
+import datetime
+time_str = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+
+for tag_name in all_notes_json_blurbs:    
+    os.makedirs(f"../outputs-" + time_str + "/{TAG_NAME_TO_FOLDER[tag_name]}", exist_ok=True)
     for note_json in all_notes_json_blurbs[tag_name]:
         final_markdown = build_final_markdown(note_json, tag_name)
-        with open(f"../outputs/{TAG_NAME_TO_FOLDER[tag_name]}/{note_json['title']}.md", "w") as f:
+        with open(f"../outputs-" + time_str + "/{TAG_NAME_TO_FOLDER[tag_name]}/{note_json['title']}.md", "w") as f:
             f.write(final_markdown)
     
 

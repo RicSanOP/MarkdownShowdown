@@ -124,7 +124,6 @@ class Note:
         # print(chunks)
 
         for chunk in chunks:
-            print("Processing chunk # ", chunks.index(chunk))
             info_chunk = chunk.find("info")
             if info_chunk is None:
                 info_chunk = soup.new_tag("info")

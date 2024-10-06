@@ -2,7 +2,7 @@
 
 The Transformer is a key component of the DETR model. It processes image features extracted by the CNN and performs object detection by learning global relationships between objects and their surroundings.
 
-#### **Components of the Transformer:**
+#### Components of the Transformer:
 
 1. **Transformer Encoder**:
    - The encoder receives the image features from the CNN backbone and processes them with **multi-head self-attention** layers and **feed-forward neural networks**.
@@ -12,13 +12,13 @@ The Transformer is a key component of the DETR model. It processes image feature
    - The decoder uses **object queries**, which are learnable embeddings, to predict the locations and categories of objects. These queries interact with the output of the encoder through multi-head attention layers.
    - The decoder outputs predictions for bounding boxes and class labels.
 
-#### **Key Components:**
+#### Key Components:
 
 - **Multi-head self-attention**: Allows the model to focus on different parts of the input at each layer.
 - **Positional encoding**: Adds positional information to the otherwise order-invariant Transformer.
 - **Feed-forward networks**: Used after self-attention to further process the representations.
 
-#### **Code Example:**
+#### Code Example:
 
 The Transformer architecture is implemented in the `models/transformer.py` file of the DETR repository. Below is a simplified version of the Transformer class:
 
@@ -48,7 +48,7 @@ class Transformer(nn.Module):
         return output
 ```
 
-#### **Positional Encoding:**
+#### Positional Encoding:
 Positional encodings are added to the input to ensure the model retains information about the positions of features. This is critical for object detection where spatial relationships matter:
 
 ```python
@@ -68,7 +68,7 @@ class PositionalEncoding(nn.Module):
         return x
 ```
 
-#### **Object Queries:**
+#### Object Queries:
 
 In DETR, object queries are learnable embeddings that interact with the Transformer decoder output. These queries are crucial for predicting object locations and classes.
 

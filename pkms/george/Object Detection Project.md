@@ -8,7 +8,7 @@ This project focuses on implementing and optimizing the **DETR (Detection Transf
 	- [[Team Directory]]
 	- [[Project Roadmap]]
 - Journals
-	- [[2025-01-01 Meeting]]
-	- [[2025-01-02 Meeting]]
+	- [[Meeting Notes Week 1]]
+	- [[Meeting Notes Week 2]]
 - Knowledge
 	- [[What is Computer Vision?]]

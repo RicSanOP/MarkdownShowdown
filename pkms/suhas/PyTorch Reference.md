@@ -1,14 +1,14 @@
 # PyTorch Reference
 
 Here’s a condensed reference to **PyTorch** for working on the DETR project:
-### **1. Tensors**
+### 1. Tensors
    - PyTorch’s core data structure is the **Tensor**, similar to NumPy arrays but optimized for GPUs.
    ```python
    import torch
    x = torch.tensor([1.0, 2.0])
    ```
 
-### **2. Autograd**
+### 2. Autograd
    - PyTorch automatically computes gradients for backpropagation using **autograd**.
    ```python
    x.requires_grad = True
@@ -16,7 +16,7 @@ Here’s a condensed reference to **PyTorch** for working on the DETR project:
    y.backward()
    ```
 
-### **3. Modules & Models**
+### 3. Modules & Models
    - Models are created using the **`torch.nn.Module`** class. This is where layers and forward pass logic are defined.
    ```python
    class MyModel(nn.Module):
@@ -28,21 +28,21 @@ Here’s a condensed reference to **PyTorch** for working on the DETR project:
            return self.fc(x)
    ```
 
-### **4. Optimizers**
+### 4. Optimizers
    - PyTorch provides optimizers like SGD, Adam, etc., for updating model parameters.
    ```python
    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
    optimizer.step()
    ```
 
-### **5. Datasets & DataLoaders**
+### 5. Datasets & DataLoaders
    - The **`torch.utils.data.DataLoader`** class is used to load datasets and handle batching.
    ```python
    from torch.utils.data import DataLoader
    dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
    ```
 
-### **6. Training Loop**
+### 6. Training Loop
    - A typical PyTorch training loop includes:
      1. Forward pass
      2. Loss computation
@@ -58,14 +58,14 @@ for data, targets in dataloader:
        optimizer.zero_grad()
 ```
 
-### **7. GPU/CPU Switching**
+### 7. GPU/CPU Switching
    - Models and data can be transferred between CPU and GPU using `to()`:
 ```python
    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
    model.to(device)
 ```
 
-### **8. Saving and Loading Models**
+### 8. Saving and Loading Models
    - Models are saved and loaded using `torch.save` and `torch.load`.
 ```python
    torch.save(model.state_dict(), "model.pth")
