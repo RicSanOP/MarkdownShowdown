@@ -246,8 +246,7 @@ def build_final_markdown(note_json, tag_name):
     summary: a summary of the new markdown note's contents which could add some further useful context
     justification: a justification for the content curation of the new markdown note which could add some further useful context
     images: a list of image filenames that must be embedded into the new note using the embed syntax ![[ ]] where the filename is inserted within the double square brackets
-    """ + 
-    f"""
+    """ + f"""
     Here is the JSON object you will be working with for this note:
     f{json.dumps(note_json)}
     
