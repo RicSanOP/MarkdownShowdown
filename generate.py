@@ -97,8 +97,8 @@ def main():
     show_loading_slider(20)
     
     # Step 9: Move the final notes folder to a designated location
-    source_folder = "path_to_source_folder"
-    destination_folder = "path_to_destination_folder"
+    source_folder = "../backup"
+    destination_folder = "../merged_notes"
     beep(4)
     move_final_notes(source_folder, destination_folder)
 
