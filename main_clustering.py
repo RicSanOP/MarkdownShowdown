@@ -272,14 +272,14 @@ TAG_NAME_TO_FOLDER = {
     "knowledge": "notes"
 }
 
-import datetime
+from datetime import datetime
 time_str = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
 
 for tag_name in all_notes_json_blurbs:    
-    os.makedirs(f"../outputs-" + time_str + "/{TAG_NAME_TO_FOLDER[tag_name]}", exist_ok=True)
+    os.makedirs("../outputs-" + time_str + f"/{TAG_NAME_TO_FOLDER[tag_name]}", exist_ok=True)
     for note_json in all_notes_json_blurbs[tag_name]:
         final_markdown = build_final_markdown(note_json, tag_name)
-        with open(f"../outputs-" + time_str + "/{TAG_NAME_TO_FOLDER[tag_name]}/{note_json['title']}.md", "w") as f:
+        with open("../outputs-" + time_str + f"/{TAG_NAME_TO_FOLDER[tag_name]}/{note_json['title']}.md", "w") as f:
             f.write(final_markdown)
     
 
