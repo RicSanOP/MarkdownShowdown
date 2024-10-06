@@ -1,7 +1,7 @@
 # Week 1 Report
 
 #### What I Did:
-- **Downloaded and structured the COCO 2017 dataset** for training and validation.
+- **Downloaded and structured the [[COCO Dataset]]** for training and validation.
 - Implemented **basic data augmentations** such as random resizing and horizontal flipping to ensure model generalization.
 - Integrated the COCO dataset loader using `torchvision.datasets.CocoDetection`.
 

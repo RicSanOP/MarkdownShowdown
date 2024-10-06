@@ -13,7 +13,7 @@
 ![[Pasted image 20241006085047.png]]
 
 #### Problems:
-- The ResNet-101 model's higher memory requirements caused **GPU memory limitations**, especially when using larger batch sizes, resulting in out-of-memory errors during training.
+- The [[Convolutional Neural Network|ResNet-101]] model's higher memory requirements caused **GPU memory limitations**, especially when using larger batch sizes, resulting in out-of-memory errors during training.
 
 #### Resolution:
 - Reduced the batch size to fit within the available GPU memory and used **gradient accumulation** to compensate for the smaller batch size, maintaining training stability. Additionally, I optimized the data loader to prefetch smaller batches efficiently to reduce overhead.

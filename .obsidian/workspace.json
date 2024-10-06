@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/rifaat/Week 4 Report.md",
+                "file": "pkms/george/Meeting Notes Week 3.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/rifaat/Week 4 Report.md",
+                "file": "pkms/george/Meeting Notes Week 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/rifaat/Week 4 Report.md",
+                "file": "pkms/george/Meeting Notes Week 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pkms/rifaat/Week 4 Report.md"
+                "file": "pkms/george/Meeting Notes Week 3.md"
               }
             }
           }
@@ -166,10 +166,13 @@
   },
   "active": "d54a484531262248",
   "lastOpenFiles": [
-    "pkms/rifaat/Week 3 Report.md",
+    "pkms/george/Meeting Notes Week 4.md",
     "pkms/rifaat/Week 4 Report.md",
+    "pkms/rifaat/Week 3 Report.md",
     "pkms/rifaat/Week 2 Report.md",
     "pkms/rifaat/Week 1 Report.md",
+    "pkms/rifaat/Todos.md",
+    "pkms/george/Team Directory.md",
     "pkms/rifaat/attachments/Pasted image 20241006085354.png",
     "pkms/suhas/Dependency Management.md",
     "pkms/suhas/DETR Project Overview.md",
@@ -189,8 +192,6 @@
     "pkms/george/Tasks.md",
     "pkms/george/Meeting Notes Week 1.md",
     "pkms/george/Meeting Notes Week 2.md",
-    "pkms/rifaat/Todos.md",
-    "pkms/george/Meeting Notes Week 4.md",
     "pkms/george/Project Roadmap.md",
     "pkms/george/What is Computer Vision?.md",
     "pkms/george/DETR.md",

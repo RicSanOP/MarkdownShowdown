@@ -1,7 +1,7 @@
 # Week 3 Report
 
 #### What I Did:
-- Initiated **training of the DETR model with ResNet-50** backbone on the COCO dataset.
+- Initiated **training of the [[Detection Transformer Model Architecture|DETR]] model with ResNet-50** backbone on the [[COCO Dataset]].
 - Monitored **loss curves** and validation metrics to assess early training performance.
 - Adjusted **hyperparameters** (learning rate and weight decay) based on observed convergence behavior.
 
