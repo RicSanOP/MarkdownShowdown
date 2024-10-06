@@ -5,10 +5,10 @@
    - **Key Components**: CNN backbone (ResNet-50/101), Transformer encoder-decoder, object queries, and bipartite matching with the Hungarian algorithm.
 
 #### 2. Backbone:
-   - DETR uses **ResNet-50 or ResNet-101** as the backbone for extracting feature maps from input images. These feature maps are flattened and passed to the [[Transformer Encoder-Decoder]] for further processing.
+   - DETR uses **ResNet-50 or ResNet-101** as the backbone for extracting feature maps from input images. These feature maps are flattened and passed to the [[pkms/rifaat/Transformer Encoder-Decoder]] for further processing.
    - **Feature Extraction**: The output is a set of high-level image features, typically downsampled by a factor of 32 from the original input size. 
 
-#### 3. [[Transformer Encoder-Decoder]]:
+#### 3. [[pkms/rifaat/Transformer Encoder-Decoder]]:
    - The **Transformer encoder** processes these feature maps with multi-head self-attention layers. Positional encodings are added to retain spatial relationships.
    - The **Transformer decoder** takes a fixed number of **learnable object queries** and predicts object class labels and bounding boxes by interacting with the encoder’s outputs.
    - This architecture allows DETR to capture global dependencies and interactions between objects, unlike traditional detectors.
@@ -46,6 +46,6 @@
      - Struggles with small objects due to the lack of hierarchical feature pyramid networks (FPN).
 
 #### Code Example:
-   The core DETR architecture can be found in the `models/detr.py` file, with key parts for the [[Transformer Encoder-Decoder]] implemented in `models/transformer.py`.
+   The core DETR architecture can be found in the `models/detr.py` file, with key parts for the [[pkms/rifaat/Transformer Encoder-Decoder]] implemented in `models/transformer.py`.
 
 This architecture is ideal for researchers who want to explore Transformer-based models for object detection and experiment with end-to-end approaches that simplify object detection pipelines.

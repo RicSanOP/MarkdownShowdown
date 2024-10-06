@@ -1,7 +1,7 @@
 # Meeting Notes Week 2
 
 **Previous Meeting**: [[Meeting Notes Week 1]]
-**Next Meeting**: [[Meeting Notes Week 3]]
+**Next Meeting**: [[pkms/george/Meeting Notes Week 3]]
 **Attendees:** Technical Project Manager, Software Engineer, Machine Learning Researcher
 
 #### Discussion:

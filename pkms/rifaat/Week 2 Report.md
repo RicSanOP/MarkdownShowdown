@@ -13,7 +13,7 @@
 ![[Pasted image 20241006084955.png]]
 
 #### Problems:
-- Encountered dimension mismatch errors while integrating positional encodings with the [[Transformer Encoder-Decoder]] model, leading to incorrect shape handling in the forward pass.
+- Encountered dimension mismatch errors while integrating positional encodings with the [[pkms/rifaat/Transformer Encoder-Decoder]] model, leading to incorrect shape handling in the forward pass.
 
 #### Resolution:
 - After reviewing the encoding's implementation, I ensured the positional encodings matched the dimension of the flattened feature map before feeding them into the Transformer layers. This required reshaping the input tensor to align with the expected shape in the model.

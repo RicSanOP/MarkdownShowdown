@@ -1,0 +1,62 @@
+{
+  "cascadeColors": true,
+  "colorBackground": true,
+  "palette": [
+    {
+      "id": "WBKW7OzZ6u2A8wdRjXZsy",
+      "name": "red",
+      "value": "#ff757f"
+    },
+    {
+      "id": "5EVoxI8vM48vfKql9eUrX",
+      "name": "yellow",
+      "value": "#e0af68"
+    },
+    {
+      "id": "xksB87yzJuZwimv8orr4h",
+      "name": "green",
+      "value": "#9ece6a"
+    },
+    {
+      "id": "kA9gBhF7NoIGxv04MEFfN",
+      "name": "cyan",
+      "value": "#7dcfff"
+    },
+    {
+      "id": "FOzxzAObhnZIP9-FnL1Ra",
+      "name": "blue",
+      "value": "#7aa2f7"
+    },
+    {
+      "id": "ra2vDm0dtibCWWX7fvomY",
+      "name": "magenta",
+      "value": "#bb9af7"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "outputs",
+      "color": "WBKW7OzZ6u2A8wdRjXZsy"
+    },
+    {
+      "path": "pkms",
+      "color": "5EVoxI8vM48vfKql9eUrX"
+    },
+    {
+      "path": "toy",
+      "color": "xksB87yzJuZwimv8orr4h"
+    },
+    {
+      "path": "vector",
+      "color": "kA9gBhF7NoIGxv04MEFfN"
+    },
+    {
+      "path": "xmedia",
+      "color": "FOzxzAObhnZIP9-FnL1Ra"
+    },
+    {
+      "path": "xproj",
+      "color": "ra2vDm0dtibCWWX7fvomY"
+    }
+  ]
+}

@@ -4,22 +4,78 @@
     "type": "split",
     "children": [
       {
-        "id": "5fdd9839fab90430",
-        "type": "tabs",
+        "id": "94457e4d59379e37",
+        "type": "split",
         "children": [
           {
-            "id": "d98f52c236d427be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "toy/inputs/charlie/United Kingdom.md",
-                "mode": "source",
-                "source": false
+            "id": "5fdd9839fab90430",
+            "type": "tabs",
+            "dimension": 72.82986111111111,
+            "children": [
+              {
+                "id": "7088a8fe7fda577d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
               }
-            }
+            ]
+          },
+          {
+            "id": "201851b0f46a1e7c",
+            "type": "tabs",
+            "dimension": 27.17013888888889,
+            "children": [
+              {
+                "id": "e7d881d0ebe6228b",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": null,
+                      "focus": false,
+                      "profile": {
+                        "args": [],
+                        "executable": "/bin/zsh",
+                        "name": "terminalMS",
+                        "platforms": {
+                          "darwin": false,
+                          "linux": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": true,
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": {
+                        "columns": 111,
+                        "data": "rifirb16-pop% ",
+                        "rows": 11
+                      }
+                    }
+                  },
+                  "pinned": true
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -66,26 +122,36 @@
             }
           }
         ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300
-  },
-  "right": {
-    "id": "520617429665cce3",
-    "type": "split",
-    "children": [
+      },
       {
-        "id": "57f01a9375e4eef7",
+        "id": "04239a06d81f73cb",
         "type": "tabs",
         "children": [
+          {
+            "id": "d98f52c236d427be",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "5fc2118a71161196",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
           {
             "id": "50b44ae77480c8ac",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "toy/inputs/charlie/United Kingdom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,20 +168,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "toy/inputs/charlie/United Kingdom.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "5fc2118a71161196",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
               }
             }
           },
@@ -124,17 +178,44 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "toy/inputs/charlie/United Kingdom.md"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 516.5
+  },
+  "right": {
+    "id": "520617429665cce3",
+    "type": "split",
+    "children": [
+      {
+        "id": "57f01a9375e4eef7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16b7c1431556657c",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "27d337582699b2e7",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -143,55 +224,58 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "terminal:Open terminal": false,
+      "smart-connections:Open: View Smart Connections": false,
+      "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "511942abfaaffb6f",
+  "active": "e7d881d0ebe6228b",
   "lastOpenFiles": [
-    "toy/inputs/charlie/attachments/Pasted image 20241006105037.png",
-    "toy/inputs/bob/Europe.md",
-    "toy/inputs/alice/Earth.md",
-    "toy/inputs/charlie/United Kingdom.md",
-    "toy/inputs/bob/attachments/Pasted image 20241006104823.png",
-    "toy/inputs/charlie/attachments",
-    "toy/inputs/bob/attachments",
-    "toy/inputs/alice/attachments/Pasted image 20241006103914.png",
-    "toy/inputs/alice/attachments",
-    "pkms/george/Tasks.md",
-    "toy/inputs/charlie",
-    "toy/inputs/bob",
-    "toy/inputs/alice",
-    "toy/inputs/Untitled.md",
-    "toy/Untitled",
-    "toy/inputs",
-    "toy/Untitled.md",
     "xproj/Chunks to Linked Notes Prompt Chain.md",
-    "toy",
-    "pkms/suhas/PyTorch Reference.md",
-    "pkms/suhas/Devlog.md",
-    "pkms/rifaat/Todos.md",
-    "pkms/rifaat/Useful Commands.md",
-    "pkms/rifaat/COCO Dataset.md",
-    "pkms/george/Meeting Notes Week 1.md",
-    "pkms/george/Meeting Notes Week 2.md",
-    "pkms/george/Meeting Notes Week 3.md",
-    "pkms/george/Meeting Notes Week 4.md",
-    "pkms/george/Presentation Plan.md",
-    "pkms/rifaat/Week 4 Report.md",
-    "pkms/rifaat/Week 3 Report.md",
-    "pkms/rifaat/Week 2 Report.md",
-    "pkms/rifaat/Week 1 Report.md",
+    "smart-chats",
+    "Untitled 1.md",
+    "Untitled.md",
+    "outputs",
+    "pkms/team/tasks/Essential Command-Line Tools for System Management and Networking.md",
+    "pkms/team/tasks/Comprehensive Task Management for DETR Implementation and Project Development.md",
+    "pkms/team/tasks/Comprehensive Task Management and Progress Updates for DETR Project.md",
+    "pkms/team/notes/Understanding the Integration and Implementation of DETR in Object Detection.md",
+    "pkms/team/notes/Optimizing Performance and Data Preparation in Machine Learning Projects.md",
+    "pkms/team/notes/Optimizing Deep Learning Model Training: Techniques and Strategies.md",
+    "pkms/team/notes/Effective Dependency Management and Environment Setup in AI Projects.md",
+    "pkms/team/notes/Comprehensive Overview of DETR Model Implementation and Training on COCO Dataset.md",
+    "pkms/team/notes/Comprehensive Guide to Project Management in AI Development.md",
+    "pkms/team/notes/Comprehensive Guide to Preparing and Evaluating Models Using the COCO Dataset.md",
+    "pkms/team/notes/Comprehensive Guide to Command-Line Tools.md",
+    "pkms/team/docs/Comprehensive Overview of DETR: Architecture, Implementation and Optimization.md",
+    "pkms/team/docs/Comprehensive Project Documentation on DETR Model Development and Implementation.md",
     "pkms/george/Team Directory.md",
+    "pkms/team/docs/Comprehensive Guide to Essential Command-Line Tools.md",
+    "outputs/outputs-2024-10-06-07-45-08/docs/Comprehensive Overview of DETR Model Architecture and Implementation.md",
+    "pkms/team/tasks",
+    "pkms/team/notes",
+    "pkms/team/docs",
+    "pkms/team",
+    "xproj/CV Project Determination.md",
+    "outputs/outputs-2024-10-06-07-45-08/tasks/Team Task Management and Meeting Summaries.md",
+    "outputs/outputs-2024-10-06-07-45-08/tasks/Performance Optimization Tasks and Meeting Notes.md",
+    "outputs/outputs-2024-10-06-07-45-08/tasks/DETR Model Implementation and Training Overview.md",
+    "outputs/outputs-2024-10-06-07-45-08/tasks/DETR Model Implementation and Task Management Summary.md",
+    "outputs/outputs-2024-10-06-07-45-08/tasks/Dependency Management Tasks and Updates.md",
+    "outputs/outputs-2024-10-06-07-45-08/tasks",
+    "outputs/outputs-2024-10-06-07-45-08/notes",
+    "outputs/outputs-2024-10-06-07-45-08/docs",
+    "outputs/outputs-2024-10-06-07-45-08",
+    "toy/inputs/charlie/attachments/Pasted image 20241006105037.png",
+    "toy/inputs/bob/attachments/Pasted image 20241006104823.png",
+    "toy/inputs/alice/attachments/Pasted image 20241006103914.png",
     "pkms/rifaat/attachments/Pasted image 20241006085354.png",
-    "pkms/suhas/Dependency Management.md",
-    "pkms/suhas/DETR Project Overview.md",
-    "pkms/suhas/Model Implementation.md",
     "pkms/rifaat/attachments/Pasted image 20241006085047.png",
     "pkms/rifaat/attachments/Pasted image 20241006085015.png",
     "pkms/rifaat/attachments/Pasted image 20241006084955.png",
     "pkms/suhas/attachments/Pasted image 20241006084835.png",
     "xmedia/Pasted image 20241005152731.png",
-    "pkms/george/attachments/Pasted image 20241006020017.png",
-    "vector/__pycache__/chroma_handler.cpython-311.pyc"
+    "pkms/george/attachments/Pasted image 20241006020017.png"
   ]
 }

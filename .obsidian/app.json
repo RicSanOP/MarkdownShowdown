@@ -1,4 +1,5 @@
 {
   "attachmentFolderPath": "xmedia",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "showInlineTitle": false
 }
