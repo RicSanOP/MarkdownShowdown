@@ -180,8 +180,6 @@ class Vault:
         for note_title, rel_path in notes_list.items():
             if not rel_path:
                 continue
-            if note_title != "DETR":
-                continue
             markdown = vault.get_source_text(note_title)
             print("Procesing note: ", note_title)
             created_note = Note(
@@ -206,8 +204,6 @@ class Vault:
 def get_list_of_users(team_path):
     users = []
     for user_path in os.listdir(team_path):
-        if user_path != "george":
-            continue
         user_vault = Vault(user_path, os.path.join(team_path, user_path))
         users.append(user_vault)
     return users
