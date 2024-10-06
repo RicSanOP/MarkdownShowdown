@@ -1,4 +1,4 @@
-```markdown
+
 # COCO Dataset and DETR Model Training Workflow
 
 This note synthesizes the project documentation related to the COCO dataset and the DETR model training workflow. It covers data preparation tasks such as downloading, preprocessing, and data augmentation of the COCO dataset. It also details model training tasks, including training the DETR model with ResNet-50 and ResNet-101 backbones, fine-tuning hyperparameters, and monitoring training progress. Additionally, it discusses evaluation and testing tasks, such as evaluating models on the COCO validation set, benchmarking performance metrics like mAP and IoU, and analyzing false positives and negatives. The note also includes meeting notes and weekly reports from team members, highlighting their contributions and issues faced, such as version compatibility problems and their resolutions.

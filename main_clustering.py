@@ -10,7 +10,6 @@ from mistralai import Mistral
 from umap import UMAP
 
 from md_parse import get_list_of_users
-from vector.chroma_handler import ChromaHandler
 
 import sys
 
@@ -85,7 +84,6 @@ if sys.argv and len(sys.argv) > 1 and sys.argv[1] == "speed":
     all_texts = json.load(open("texts.json"))
     all_tags = json.load(open("tags.json"))
 else:
-    db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
     all_users = get_list_of_users(path)
 
     for user in all_users:
@@ -228,7 +226,7 @@ for tag_name in next(iter(all_tags)).keys():
             tagged_texts.append(all_texts[i])
     umap_model = UMAP(n_neighbors=5, n_components=15, min_dist=0.0, metric="cosine")
     hdbscan_model = HDBSCAN(
-        min_samples=7, gen_min_span_tree=True, prediction_data=True, min_cluster_size=4
+        min_samples=5, gen_min_span_tree=True, prediction_data=True, min_cluster_size=3
     )
     topic_model = BERTopic(umap_model=umap_model, hdbscan_model=hdbscan_model)
     matrix, _ = topic_model.fit_transform(all_texts)
