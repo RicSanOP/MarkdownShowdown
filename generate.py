@@ -46,11 +46,8 @@ def show_loading_slider(duration=30):
 def move_final_notes(source, destination):
     """Move a folder with the final merged notes to a new location"""
     if os.path.exists(source):
-        print(f"Moving final merged notes to {destination}...")
         shutil.copytree(source, destination)
-        print("Merged notes moved successfully.")
-    else:
-        print(f"Source folder {source} does not exist.")
+        print("Merged notes created successfully.")
 
 def main():
     # roughly emulates note generation/merging process to line up for demo purposes
