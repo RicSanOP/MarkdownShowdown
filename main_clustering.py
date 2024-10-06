@@ -14,8 +14,8 @@ from openai import OpenAI
 
 import sys
 
-path = "pkms"
-#path = "toy/inputs"
+#path = "pkms"
+path = "toy/inputs"
 
 all_vectors = []
 all_texts = []
@@ -167,7 +167,8 @@ else:
                 tags["project"] = True
             if "knowledge" in tags_txt:
                 tags["knowledge"] = True
-
+            import IPython
+            IPython.embed()
             img_path = extract_img_path(text)
             if img_path:
                 tags["image"] = img_path
@@ -250,7 +251,7 @@ all_notes_json_blurbs = {}
 import IPython
 IPython.embed()
 
-for tag_name in next(iter(all_tags)).keys():
+for tag_name in ["task", "project", "knowledge"]:
     print("Clustering for tag: " + tag_name)
     tagged_texts = []
     for i in range(len(all_tags)):
