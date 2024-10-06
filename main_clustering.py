@@ -10,10 +10,12 @@ from mistralai import Mistral
 from umap import UMAP
 
 from md_parse import get_list_of_users
+from openai import OpenAI
 
 import sys
 
 path = "pkms"
+#path = "toy/inputs"
 
 all_vectors = []
 all_texts = []
@@ -23,6 +25,8 @@ all_tags = []
 mistral = Mistral(
     api_key=os.getenv("MISTRAL_API_KEY", ""),
 )
+
+openai = OpenAI()
 
 
 def query(text, model, max_tokens=10000):
@@ -40,6 +44,14 @@ def query(text, model, max_tokens=10000):
         .choices[0]
         .message.content
     )
+    
+def query_openai(text, model, max_tokens=10000):
+    return openai.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": text}
+        ]
+    ).choices[0].message.content
 
 
 def query_json(text, model, max_tokens=10000):
@@ -59,6 +71,23 @@ def query_json(text, model, max_tokens=10000):
         .message.content
     )
 
+def query_json_openai(text, model, max_tokens=10000):
+    return openai.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": text}
+        ],
+        response_format={"type": "json_object"}
+    ).choices[0].message.content
+    
+def query_json_openai_mini(text, model, max_tokens=10000):
+    return openai.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": text}
+        ],
+        response_format={"type": "json_object"}
+    ).choices[0].message.content
 
 def get_text_embeddings(sentences):
     embeddings_resp = mistral.embeddings.create(model="mistral-embed", inputs=sentences)
@@ -129,7 +158,7 @@ else:
 
             Input Content for Classification: {text}
             """
-            tags_txt = query(classification_prompt, "mistral-large-latest", 100)
+            tags_txt = query_openai(classification_prompt, "mistral-large-latest", 100)
             tags = {"task": False, "project": False, "knowledge": False}
 
             if "task" in tags_txt:
@@ -211,12 +240,15 @@ def get_note_blurb_json(chunks, tag_name):
     {json.dumps(chunks)}
     """
     )
-    output_json = query_json(prompt, "mistral-large-latest", 10000)
+    output_json = query_json_openai(prompt, "mistral-large-latest", 10000)
     output_json = json.loads(output_json)
     return output_json
 
 
 all_notes_json_blurbs = {}
+
+import IPython
+IPython.embed()
 
 for tag_name in next(iter(all_tags)).keys():
     print("Clustering for tag: " + tag_name)
@@ -224,7 +256,7 @@ for tag_name in next(iter(all_tags)).keys():
     for i in range(len(all_tags)):
         if all_tags[i][tag_name]:
             tagged_texts.append(all_texts[i])
-    umap_model = UMAP(n_neighbors=5, n_components=15, min_dist=0.0, metric="cosine")
+    umap_model = UMAP(n_neighbors=5, n_components=5, min_dist=0.0, metric="cosine")
     hdbscan_model = HDBSCAN(
         min_samples=5, gen_min_span_tree=True, prediction_data=True, min_cluster_size=3
     )
@@ -283,7 +315,7 @@ def get_cluster_links(json_blurbs):
     { [ { title_from: "", title_to: "" }, { title_from: "", title_to: "" }, { title_from: "", title_to: "" } ] }
     """
 
-    output_json = query_json(prompt, "mistral-large-latest", 10000)
+    output_json = query_json_openai_mini(prompt, "mistral-large-latest", 10000)
     output_json = json.loads(output_json)
     return output_json
 
@@ -317,14 +349,16 @@ def build_final_markdown(note_json, tag_name):
     """
     )
 
-    output_markdown = query(prompt, "mistral-large-latest", 10000)
+    output_markdown = query_openai(prompt, "mistral-large-latest", 10000)
     return output_markdown
 
 
 links = get_cluster_links(all_notes_json_blurbs)
 all_notes_jsons = itertools.chain(*all_notes_json_blurbs.values())
 
-
+if 'links' in links:
+    links = links['links']
+    
 for link_data in links:
     for note in all_notes_jsons:
         if note["title"] == link_data["title_from"]:

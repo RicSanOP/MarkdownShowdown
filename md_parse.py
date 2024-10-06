@@ -6,10 +6,14 @@ import re
 import obsidiantools.api as otools
 from bs4 import BeautifulSoup
 from mistralai import Mistral
+from openai import OpenAI
+
 
 mistral = Mistral(
     api_key=os.getenv("MISTRAL_API_KEY", ""),
 )
+
+openai = OpenAI()
 
 
 class ImageProcessor:
@@ -49,7 +53,7 @@ class ImageProcessor:
                 ],
             }
         ]
-
+        
         chat_response = mistral.chat.complete(
             model="pixtral-12b-2409", messages=messages, max_tokens=200
         )
@@ -73,6 +77,13 @@ class ImageProcessor:
 
         return markdown_string
 
+def query_openai(text, model, max_tokens=10000):
+    return openai.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": text}
+        ]
+    ).choices[0].message.content
 
 def query(text, model, max_tokens=10000):
     return (
@@ -117,7 +128,7 @@ class Note:
         <chunk> <info> </info> </chunk>
         """
         # print(prompt)
-        chunked_doc = query(prompt, "mistral-large-latest", 120000)
+        chunked_doc = query_openai(prompt, "mistral-large-latest", 120000)
         soup = BeautifulSoup(chunked_doc)
         # print(chunked_doc)
 
@@ -143,7 +154,7 @@ class Note:
                 prompt = f"""The following chunk is too long: {chunk}
                 Please shorten it to less characters and output the shortened version.
                 """
-                shortened_chunk = query(prompt, "mistral-small-latest", max_tokens=300)
+                shortened_chunk = query_openai(prompt, "mistral-small-latest", max_tokens=300)
                 chunk.string = shortened_chunk.find("chunk").string[0:1000]
             chunk.string = ImageProcessor.replace_images_with_desc(
                 str(chunk), self.vault_path
