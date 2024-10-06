@@ -112,9 +112,6 @@ for user in all_users:
     all_texts.extend(texts)
     all_tags.extend(tags_list)
 
-import IPython
-IPython.embed()
-
 TAG_PROMPTS = {
     "task": """Task Management Notes
 Task Management Notes are markdown files containing information on actions that the author has taken in the past, is currently undertaking and/or will take in the future. Task Management Notes can take on many different styles such as:
@@ -180,8 +177,8 @@ for tag_name in next(iter(all_tags)).keys():
     for i in range(len(all_tags)):
         if all_tags[i][tag_name]:
             tagged_texts.append(all_texts[i])
-    umap_model = UMAP(n_neighbors=5, n_components=14, min_dist=0.0, metric='cosine')
-    hdbscan_model = HDBSCAN(min_samples=7, gen_min_span_tree=True, prediction_data=True, min_cluster_size=3)
+    umap_model = UMAP(n_neighbors=5, n_components=15, min_dist=0.0, metric='cosine')
+    hdbscan_model = HDBSCAN(min_samples=7, gen_min_span_tree=True, prediction_data=True, min_cluster_size=4)
     topic_model = BERTopic(umap_model=umap_model, hdbscan_model=hdbscan_model)
     matrix, _ = topic_model.fit_transform(all_texts)
 
