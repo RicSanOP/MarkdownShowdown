@@ -8,6 +8,7 @@ from vector.chroma_handler import ChromaHandler
 from collections import defaultdict
 import json
 import itertools
+import sys
 
 path = "pkms"
 
@@ -15,6 +16,8 @@ all_users = get_list_of_users(path)
 all_vectors = []
 all_texts = []
 all_tags = []
+
+
 
 
 mistral = Mistral(
@@ -52,65 +55,71 @@ def get_text_embeddings(sentences):
     ]
     return embeddings
 
-db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
+# add system arg for speed mode
 
-for user in all_users:
-    chunks = user.all_chunks
-    texts = [str(chunk[1]) for chunk in chunks]
+if sys.argv and len(sys.argv) > 1 and sys.argv[1] == "speed":
+    all_texts = json.load(open("all_texts.json"))
+    all_tags = json.load(open("all_tags.json"))
+else:
+    db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
 
-    for i in range(0, len(texts)):
-        texts[i] = texts[i].replace("<chunk>", "").replace("</chunk>", "").replace("<info>", "").replace("</info>", "")
+    for user in all_users:
+        chunks = user.all_chunks
+        texts = [str(chunk[1]) for chunk in chunks]
 
-    ids = [str(chunk[0]) for chunk in chunks]
+        for i in range(0, len(texts)):
+            texts[i] = texts[i].replace("<chunk>", "").replace("</chunk>", "").replace("<info>", "").replace("</info>", "")
 
-    if not texts or not ids:
-        continue
-    tags_list = []
+        ids = [str(chunk[0]) for chunk in chunks]
 
-    for text in texts:
-        classification_prompt = f"""
-        We are trying to tag the following markdown content from our notebase according to the following tags. Each content can have one or more tags.
+        if not texts or not ids:
+            continue
+        tags_list = []
+
+        for text in texts:
+            classification_prompt = f"""
+            We are trying to tag the following markdown content from our notebase according to the following tags. Each content can have one or more tags.
+            
+            The tags are described as follows:
+            Task Management Notes
+            Task Management Notes are markdown files containing information on actions that the author has taken in the past, is currently undertaking and/or will take in the future. Task Management Notes can take on many different styles such as:
+
+            a devlog where the author describes what they have done in a journaling writing style which includes self reflections on their work
+            a checklist where the author determines what they have to do and check off items when completed
+            a table containing tasks on each row along with metadata on the team member responsible, the task priority, expected deadline and/or task priority
+            Project Documentation Notes
+            Project Documentation Notes are markdown files containing information on the project deliverable itself. These notes usually focus on a specific part of the project. They could focus on software aspect by describing the architecture of a software module, outlining the code structure of a class or function or listing the dependencies of a codebase. Project documentation could also discuss machine learning processes such as results of model training, provide reasons for how learning models are architected or comment on the performance of a model during evaluation.
+
+            Knowledge Database Notes
+            Knowledge Database Notes are markdown files containing information that is meant to educate on the problem space. These are more independent from the project's development and are meant to assist the author in better understanding the problem they are trying to solve. The hope is that some of this knowledge can come in handy when justifying current approaches in the project and/or offer solutions to future potential problems.
+
+            Please output the tag(s) as follows: tags: [tag1, tag2, tag3] where the tag options are task, project, knowledge. Each piece of content has one or more tags.
+
+            Example Output:
+            tags: [task, project]
+
+            Input Content for Classification: {text}
+            """
+            tags_txt = query(classification_prompt, "mistral-large-latest", 100)
+            tags = {"task": False, "project": False, "knowledge": False}
+
+            if "task" in tags_txt:
+                tags["task"] = True
+            if "project" in tags_txt:
+                tags["project"] = True
+            if "knowledge" in tags_txt:
+                tags["knowledge"] = True
+
+            tags_list.append(tags)
         
-        The tags are described as follows:
-        Task Management Notes
-        Task Management Notes are markdown files containing information on actions that the author has taken in the past, is currently undertaking and/or will take in the future. Task Management Notes can take on many different styles such as:
-
-        a devlog where the author describes what they have done in a journaling writing style which includes self reflections on their work
-        a checklist where the author determines what they have to do and check off items when completed
-        a table containing tasks on each row along with metadata on the team member responsible, the task priority, expected deadline and/or task priority
-        Project Documentation Notes
-        Project Documentation Notes are markdown files containing information on the project deliverable itself. These notes usually focus on a specific part of the project. They could focus on software aspect by describing the architecture of a software module, outlining the code structure of a class or function or listing the dependencies of a codebase. Project documentation could also discuss machine learning processes such as results of model training, provide reasons for how learning models are architected or comment on the performance of a model during evaluation.
-
-        Knowledge Database Notes
-        Knowledge Database Notes are markdown files containing information that is meant to educate on the problem space. These are more independent from the project's development and are meant to assist the author in better understanding the problem they are trying to solve. The hope is that some of this knowledge can come in handy when justifying current approaches in the project and/or offer solutions to future potential problems.
-
-        Please output the tag(s) as follows: tags: [tag1, tag2, tag3] where the tag options are task, project, knowledge. Each piece of content has one or more tags.
-
-        Example Output:
-        tags: [task, project]
-
-        Input Content for Classification: {text}
-        """
-        tags_txt = query(classification_prompt, "mistral-large-latest", 100)
-        tags = {"task": False, "project": False, "knowledge": False}
-
-        if "task" in tags_txt:
-            tags["task"] = True
-        if "project" in tags_txt:
-            tags["project"] = True
-        if "knowledge" in tags_txt:
-            tags["knowledge"] = True
-
-        tags_list.append(tags)
-    
-    db_handler.add_docs_with_embeddings(
-        texts,
-        ids, 
-        tags_list
-    )
-    all_vectors.extend(db_handler.get_text_embeddings(texts))
-    all_texts.extend(texts)
-    all_tags.extend(tags_list)
+        db_handler.add_docs_with_embeddings(
+            texts,
+            ids, 
+            tags_list
+        )
+        all_vectors.extend(db_handler.get_text_embeddings(texts))
+        all_texts.extend(texts)
+        all_tags.extend(tags_list)
 
 TAG_PROMPTS = {
     "task": """Task Management Notes
@@ -150,7 +159,7 @@ def get_note_blurb_json(chunks, tag_name):
     prompt = TAG_PROMPTS["general"]
     prompt += TAG_PROMPTS[tag_name]
     prompt += f"""
-    You are going to help us come up with a title for a new markdown note. We are going to provide you with a collection of markdown files and chunks that have tagged with the {PROPER_TAG_NAMES[tag_name]} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please generate the following:
+    You are going to help us come up with a title for a new markdown note. When generating a title, strike a balance between suggesting a simple title and one that encompasses the information provided. We are going to provide you with a collection of markdown files and chunks that have tagged with the {PROPER_TAG_NAMES[tag_name]} note type and share a strong semantic similarity. Imagine that you are about to draft a new note containing all the information found in the provided markdown files and chunks. Please generate the following:
 
     - suggest a title for this new markdown note
     - justify why you have decided to go with this title
@@ -192,6 +201,7 @@ for tag_name in next(iter(all_tags)).keys():
     for cluster in clusters:
         texts = clusters[cluster]
         cluster_json = get_note_blurb_json(texts, tag_name)
+        cluster_json['chunks']  = texts
         all_notes_json_blurbs[tag_name].append(cluster_json)
 
 def get_cluster_links(json_blurbs):
