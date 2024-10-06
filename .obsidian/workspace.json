@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "2f2f6f6c9f6b38d1",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d54a484531262248",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "5fdd9839fab90430",
         "type": "tabs",
         "children": [
@@ -31,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/george/Tasks.md",
+                "file": "toy/inputs/charlie/United Kingdom.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "toy/inputs/charlie/United Kingdom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "toy/inputs/charlie/United Kingdom.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md"
+                "file": "toy/inputs/charlie/United Kingdom.md"
               }
             }
           }
@@ -164,8 +146,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d54a484531262248",
+  "active": "511942abfaaffb6f",
   "lastOpenFiles": [
+    "toy/inputs/charlie/attachments/Pasted image 20241006105037.png",
+    "toy/inputs/bob/Europe.md",
+    "toy/inputs/alice/Earth.md",
+    "toy/inputs/charlie/United Kingdom.md",
+    "toy/inputs/bob/attachments/Pasted image 20241006104823.png",
+    "toy/inputs/charlie/attachments",
+    "toy/inputs/bob/attachments",
+    "toy/inputs/alice/attachments/Pasted image 20241006103914.png",
+    "toy/inputs/alice/attachments",
+    "pkms/george/Tasks.md",
+    "toy/inputs/charlie",
+    "toy/inputs/bob",
+    "toy/inputs/alice",
+    "toy/inputs/Untitled.md",
+    "toy/Untitled",
+    "toy/inputs",
+    "toy/Untitled.md",
+    "xproj/Chunks to Linked Notes Prompt Chain.md",
+    "toy",
+    "pkms/suhas/PyTorch Reference.md",
+    "pkms/suhas/Devlog.md",
+    "pkms/rifaat/Todos.md",
     "pkms/rifaat/Useful Commands.md",
     "pkms/rifaat/COCO Dataset.md",
     "pkms/george/Meeting Notes Week 1.md",
@@ -173,7 +177,6 @@
     "pkms/george/Meeting Notes Week 3.md",
     "pkms/george/Meeting Notes Week 4.md",
     "pkms/george/Presentation Plan.md",
-    "pkms/rifaat/Todos.md",
     "pkms/rifaat/Week 4 Report.md",
     "pkms/rifaat/Week 3 Report.md",
     "pkms/rifaat/Week 2 Report.md",
@@ -182,32 +185,13 @@
     "pkms/rifaat/attachments/Pasted image 20241006085354.png",
     "pkms/suhas/Dependency Management.md",
     "pkms/suhas/DETR Project Overview.md",
-    "pkms/suhas/Devlog.md",
     "pkms/suhas/Model Implementation.md",
-    "pkms/suhas/Project Reflections.md",
-    "pkms/suhas/PyTorch Reference.md",
     "pkms/rifaat/attachments/Pasted image 20241006085047.png",
     "pkms/rifaat/attachments/Pasted image 20241006085015.png",
     "pkms/rifaat/attachments/Pasted image 20241006084955.png",
     "pkms/suhas/attachments/Pasted image 20241006084835.png",
     "xmedia/Pasted image 20241005152731.png",
-    "pkms/suhas/Debugging X.md",
-    "pkms/suhas/CNN Backbone.md",
-    "pkms/suhas/2025-01-02.md",
-    "pkms/george/Tasks.md",
-    "pkms/george/Project Roadmap.md",
-    "pkms/george/What is Computer Vision?.md",
-    "pkms/george/DETR.md",
     "pkms/george/attachments/Pasted image 20241006020017.png",
-    "vector/__pycache__/chroma_handler.cpython-311.pyc",
-    "vector/__pycache__",
-    "main_clustering.py",
-    "__pycache__/md_parse.cpython-311.pyc",
-    "__pycache__",
-    "pkms/george/attachments",
-    "md_parse.py",
-    "main.py",
-    "vector/chroma_handler.py",
-    "vector"
+    "vector/__pycache__/chroma_handler.cpython-311.pyc"
   ]
 }
