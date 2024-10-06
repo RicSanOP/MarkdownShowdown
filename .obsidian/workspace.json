@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pkms/george/DETR.md",
+                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pkms/george/DETR.md",
+                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pkms/george/DETR.md",
+                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pkms/george/DETR.md"
+                "file": "xproj/Chunks to Linked Notes Prompt Chain.md"
               }
             }
           }
@@ -164,8 +164,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "511942abfaaffb6f",
+  "active": "d54a484531262248",
   "lastOpenFiles": [
+    "pkms/george/DETR.md",
     "pkms/george/attachments/Pasted image 20241006020017.png",
     "xproj/Chunks to Linked Notes Prompt Chain.md",
     "vector/__pycache__/chroma_handler.cpython-311.pyc",
@@ -180,7 +181,6 @@
     "pkms/george/Computer Vision History.md",
     "pkms/rifaat/DETR Workflow Summary.md",
     "pkms/george/Transformers.md",
-    "pkms/george/DETR.md",
     "pkms/george/CNN.md",
     "pkms/suhas/Dependency Management.md",
     "pkms/suhas/Model Implementation.md",

@@ -138,5 +138,25 @@ OR
 OR
 [[Chunks to Linked Notes Prompt Chain#Knowledge Database Notes]]
 
+You are going to draft a new markdown note within the parameters we provide. The new note will be a {INSERT NOTE TYPE HERE}. We are going to provide you with a JSON object containing the following format:
 
-You are going to draft a new markdown note within the parameters we provide. This new markdown note will include wikilink style links and may also include codeblocks and/or images. We 
+{
+	title: "",
+	chunks: [],
+	markdowns: [],
+	links: [],
+	summary: "",
+	justification: "",
+	images: [],
+}
+
+Here are some details on each field of the JSON object:
+- title: the title and filename of the new markdown note which should be added to the top of the file using `#` header markdown syntax
+- chunks: a list of chunks with content that can be revised into the new markdown note
+- markdowns: a list of content from other markdowns which could add some valuable context to the new markdown note
+- links: a list of titles to other markdown notes that must be included in the new markdown note (paste the provided title within sets of double square brackets `[[ ]]`)
+- summary: a summary of the new markdown note's contents which could add some further useful context
+- justification: a justification for the content curation of the new markdown note which could add some further useful context
+- images: a list of image filenames that must be embedded into the new note using the embed syntax `![[ ]]` where the filename is inserted within the double square brackets
+
+Remember that the output is markdown so please respect the syntax of the format.
