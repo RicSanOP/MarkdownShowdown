@@ -18,7 +18,6 @@ def merge_notes(data):
     print("Merging notes from different team members...")
     merged_notes = " ".join(data)
     time.sleep(1)
-    print("Notes merged successfully.")
     return merged_notes
 
 def resolve_conflicts():
@@ -43,25 +42,22 @@ def simulate_upload():
     """Fake upload to shared storage"""
     print("Uploading the final merged notes to shared storage...")
     time.sleep(1)
-    print("Notes uploaded successfully to shared storage.")
 
 def perform_final_sync():
     print("Performing final sync operation to ensure all notes are up-to-date...")
     time.sleep(1)
-    print("Final sync complete.")
 
 def show_loading_slider(duration=30):
     """Displays a tqdm-based loading slider for a specified duration (in seconds)"""
     print("Querying the LLMs/vector DB for the note merging process. Please wait...")
     for _ in tqdm(range(duration), desc="Finalizing", ascii=True, ncols=100):
         time.sleep(1)
-    print("\nMerging process complete.")
 
 def move_final_notes(source, destination):
     """Move a folder with the final merged notes to a new location"""
     if os.path.exists(source):
         print(f"Moving final merged notes to {destination}...")
-        shutil.move(source, destination)
+        shutil.copy(source, destination)
         print("Merged notes moved successfully.")
     else:
         print(f"Source folder {source} does not exist.")
@@ -97,8 +93,8 @@ def main():
     show_loading_slider(20)
     
     # Step 9: Move the final notes folder to a designated location
-    source_folder = "../backup"
-    destination_folder = "../merged_notes"
+    source_folder = "back/outputs"
+    destination_folder = "toy"
     beep(4)
     move_final_notes(source_folder, destination_folder)
 
