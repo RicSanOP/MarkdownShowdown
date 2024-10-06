@@ -79,13 +79,13 @@ def extract_img_path(text):
         return path
 
 
-db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
 # add system arg for speed mode
 
 if sys.argv and len(sys.argv) > 1 and sys.argv[1] == "speed":
     all_texts = json.load(open("texts.json"))
     all_tags = json.load(open("tags.json"))
 else:
+    db_handler = ChromaHandler(f"../vector_tings4", "test-strings-2")
     all_users = get_list_of_users(path)
 
 
