@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "pkms/george/DETR.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "pkms/george/DETR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md",
+                "file": "pkms/george/DETR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "xproj/Chunks to Linked Notes Prompt Chain.md"
+                "file": "pkms/george/DETR.md"
               }
             }
           }
@@ -164,8 +164,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "511942abfaaffb6f",
+  "active": "d54a484531262248",
   "lastOpenFiles": [
+    "xmedia/Pasted image 20241006020017.png",
+    "xproj/Chunks to Linked Notes Prompt Chain.md",
     "vector/__pycache__/chroma_handler.cpython-311.pyc",
     "vector/__pycache__",
     "main_clustering.py",
@@ -174,7 +176,6 @@
     "pkms/george/attachments",
     "xproj/CV Project Determination.md",
     "xmedia/Pasted image 20241005152731.png",
-    "xproj/Chunks to Linked Notes Prompt Chain.md",
     "pkms/xproj/From Chunks to Linked Notes.md",
     "pkms/george/Computer Vision History.md",
     "pkms/rifaat/DETR Workflow Summary.md",
@@ -201,7 +202,6 @@
     "md_parse.py",
     "main.py",
     "vector/chroma_handler.py",
-    "vector",
-    "pkms/suhas/attachments"
+    "vector"
   ]
 }
