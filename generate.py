@@ -69,7 +69,7 @@ def main():
     show_loading_slider(20)
     
     source_folder = "back/outputs"
-    destination_folder = "toy"
+    destination_folder = "toy/outputs"
     beep(4)
     move_final_notes(source_folder, destination_folder)
 
